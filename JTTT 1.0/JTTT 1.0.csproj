@@ -54,11 +54,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="HTMLService.cs" />
-=======
-    <Compile Include="MailService.cs" />
->>>>>>> c04005fb436e9e5fc378461a288bf11fddc4cf12
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
