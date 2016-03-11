@@ -2,7 +2,7 @@
 
 namespace JTTT_1._0
 {
-    class EmailMsg
+    public class EmailMsg
     {
         public MailMessage message { get; protected set; }
 

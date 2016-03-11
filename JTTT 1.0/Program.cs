@@ -11,12 +11,13 @@ namespace JTTT_1._0
         [STAThread]
         static void Main()
         {
+            Services services = Services.Instance;
             string receiverAddres = "ziele3920@hotmail.com";
             string fileAtt = "JTTT 1.0.exe.config";
 
-            SMTPService smtpService = new SMTPService();
+            var emailService = services.emailService;
             SimpleMsg msg = new SimpleMsg(receiverAddres, "Testing SimpleMsg", "SimpleMsg working!");
-            smtpService.Send(msg);
+            emailService.Send(msg);
 
 
             Application.EnableVisualStyles();
