@@ -48,6 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailService\EmailMsg.cs" />
+    <Compile Include="EmailService\SimpleMsg.cs" />
+    <Compile Include="EmailService\SingleMsgWithAttachment.cs" />
+    <Compile Include="EmailService\SMTPService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
