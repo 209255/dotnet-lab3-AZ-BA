@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailService\EmailMsg.cs" />
+    <Compile Include="EmailService\IEmailService.cs" />
     <Compile Include="EmailService\SimpleMsg.cs" />
     <Compile Include="EmailService\SingleMsgWithAttachment.cs" />
     <Compile Include="EmailService\SMTPService.cs" />

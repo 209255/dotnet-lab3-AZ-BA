@@ -15,7 +15,8 @@ namespace JTTT_1._0
             string fileAtt = "JTTT 1.0.exe.config";
 
             SMTPService smtpService = new SMTPService();
-            smtpService.SendSimpleEmail(receiverAddres, "trolllo");
+            SimpleMsg msg = new SimpleMsg(receiverAddres, "Testing SimpleMsg", "SimpleMsg working!");
+            smtpService.Send(msg);
 
 
             Application.EnableVisualStyles();
