@@ -23,9 +23,7 @@ namespace JTTT_1._0
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            HTMLService ser = new HTMLService("http://demotywatory.pl");
-            ser.GetPageHtml();
-            ser.PrintPageNodes();
+            
 
 
         }

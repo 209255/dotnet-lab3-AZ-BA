@@ -7,7 +7,7 @@ namespace JTTT_1._0
     {
         public SingleMsgWithAttachment(string receiverEmail, string filePath, string subject, string body)
         {
-            message = new MailMessage(SMTPService.defaultEmailSender, receiverEmail);
+            message = new MailMessage(SMTPService.DefaultEmailSender, receiverEmail);
             AddSubjectAndBody(subject, body);
             message.Attachments.Add(LoadAtatchment(filePath));
         }

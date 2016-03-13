@@ -6,20 +6,21 @@ namespace JTTT_1._0
 {
     class SMTPService : IEmailService
     {
-        const string defaultSmtpOutServer = "smtp.gmail.com";
-        const int defaultPort = 587;
-        public static readonly string defaultEmailSender = "zpompka666@gmail.com";
+        const string DefaultSmtpOutServer = "smtp.gmail.com";
+        const int DefaultPort = 587;
+        public static readonly string DefaultEmailSender = "zpompka666@gmail.com";
         readonly string defaultPassword = "klop0000";
 
         public void Send(EmailMsg message)
         {
-            SmtpClient client = new SmtpClient(defaultSmtpOutServer, defaultPort)
+            SmtpClient client = new SmtpClient(DefaultSmtpOutServer, DefaultPort)
             {
-                Credentials = new NetworkCredential(defaultEmailSender, defaultPassword),
+                Credentials = new NetworkCredential(DefaultEmailSender, defaultPassword),
                 EnableSsl = true
             };
 
-            try {
+            try 
+            {
                 client.Send(message.message);
             }
             catch (Exception ex)

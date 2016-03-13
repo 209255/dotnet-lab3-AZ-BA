@@ -59,10 +59,21 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HTMLService.cs" />
+    <Compile Include="HtmlService\HtmlService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HtmlService\HtmlService.Designer.cs">
+      <DependentUpon>HtmlService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlService\HtmlService.resx">
+      <DependentUpon>HtmlService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
