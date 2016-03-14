@@ -52,6 +52,7 @@
     <Compile Include="EmailService\IEmailService.cs" />
     <Compile Include="EmailService\Messages\SimpleMsg.cs" />
     <Compile Include="EmailService\Messages\SingleMsgWithAttachment.cs" />
+    <Compile Include="EmailService\SMTPConfig\gmailConfig.cs" />
     <Compile Include="EmailService\SMTPService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

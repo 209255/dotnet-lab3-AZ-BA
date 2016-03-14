@@ -4,9 +4,9 @@ namespace JTTT_1._0
 {
     class SimpleMsg : EmailMsg
     {
-        public SimpleMsg(string receiverEmail, string subject, string body)
+        public SimpleMsg(string senderEmail, string receiverEmail, string subject, string body)
         {
-            message = new MailMessage(SMTPService.defaultEmailSender, receiverEmail);
+            message = new MailMessage(senderEmail, receiverEmail);
             AddSubjectAndBody(subject, body);
         }
     }

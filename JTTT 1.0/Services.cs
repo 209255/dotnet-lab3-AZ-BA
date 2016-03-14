@@ -13,12 +13,10 @@
         }
         private static Services instance;
 
-        public IEmailService emailService;
-
 
         private Services()
         {
-            emailService = new SMTPService();
+
         }
     }
 }
