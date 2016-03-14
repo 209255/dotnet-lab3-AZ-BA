@@ -1,33 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
+using System.Drawing.Text;
 using System.Linq;
-using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using HtmlAgilityPack;
-using HtmlDocument = HtmlAgilityPack.HtmlDocument;
-
+using System.Net;
 
 namespace JTTT_1._0
 {
-    public partial class HtmlService : UserControl
+    class HtmlService:IAction
     {
-        private readonly string _url;
-        private readonly string _matchText;
-        public string Alt { get;private set; }
-        public string Src { get;private set; }
-        public HtmlService()
+        private readonly string _url ;
+        private readonly string _keyWord;
+        private List<string> _pcturl 
         {
-            InitializeComponent();
-            _url = textBox2.Text;
-            _matchText = textBox1.Text;
+            get { return _pcturl; }
         }
-
+        public HtmlService(string url, string word)
+        {
+            _url = url.StartsWith("http://") ? url : "http://" + url;
+            _keyWord =  word.ToLower();
+        }
         private string GetPageHtml()
         {
             using (var wc = new WebClient())
@@ -38,24 +32,23 @@ namespace JTTT_1._0
             }
         }
 
-        public bool FindNodeWithText()
+        private void GetPctUrl()
         {
             var doc = new HtmlDocument();
             var pageHtml = GetPageHtml();
             doc.LoadHtml(pageHtml);
             var nodes = doc.DocumentNode.Descendants("img");
-            foreach (var node in nodes)
+            foreach (var src in from node in nodes let alt 
+             = node.GetAttributeValue("alt", "") let src = node.GetAttributeValue("src", "")
+             where alt.ToLower().Contains(_keyWord) select src)
             {
-                var alt = node.GetAttributeValue("alt", "");
-                var src = node.GetAttributeValue("src", "");
-
-                if (alt.ToLower().Contains(_matchText.ToLower()) || src.ToLower().Contains(_matchText.ToLower()))
-                {
-                    Alt = alt;
-                    Src = src;
-                }
+                _pcturl.Add(src);
             }
-            return true;
+        }
+
+        public void CheckCondition()
+        {
+            GetPctUrl();
         }
     }
 }

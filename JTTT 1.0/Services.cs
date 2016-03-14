@@ -1,24 +1,35 @@
-﻿namespace JTTT_1._0
+﻿using System.Collections.Generic;
+
+namespace JTTT_1._0
 {
     public class Services
     {
+        class ActionReactionPair
+        {
+            public IReaction Reaction { get; set; }
+            public List<IAction> Action { get;set; }
+        }
+        private ActionReactionPair _actions = new ActionReactionPair();
+
+        public void AddActionReaction(IReaction r,ref List<IAction> a)
+        {
+            _actions = new ActionReactionPair {Reaction = r,Action = a};
+        }
         public static Services Instance
         {
-            get
-            {
-                if (instance == null)
-                    instance = new Services();
-                return instance;
-            }
+            get { return _instance ?? (_instance = new Services()); }
         }
-        private static Services instance;
 
-        public IEmailService emailService;
+        
 
+        private static Services _instance;
 
+        public IEmailService EmailService;
+
+       
         private Services()
         {
-            emailService = new SMTPService();
+            EmailService = new SMTPService();
         }
     }
 }
