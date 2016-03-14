@@ -57,7 +57,6 @@
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Jeżeli";
-            
             // 
             // label2
             // 
@@ -107,7 +106,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 187);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "to wykonaj to:";
             // 
@@ -116,7 +115,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 224);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(295, 13);
             this.label7.TabIndex = 8;
             this.label7.Text = "wyślij na podany email wiadomośc ze znalezionym obrazkiem ";
             // 
@@ -125,7 +124,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 268);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 9;
             this.label8.Text = "e-mail";
             // 
@@ -144,6 +143,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Działaj!";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // JTTT
             // 

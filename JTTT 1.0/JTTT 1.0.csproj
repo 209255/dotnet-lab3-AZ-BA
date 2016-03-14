@@ -53,6 +53,7 @@
     <Compile Include="EmailService\Messages\SimpleMsg.cs" />
     <Compile Include="EmailService\Messages\SingleMsgWithAttachment.cs" />
     <Compile Include="EmailService\SMTPService.cs" />
+    <Compile Include="FileDownloader.cs" />
     <Compile Include="HtmlService\HtmlService.cs" />
     <Compile Include="IAction.cs" />
     <Compile Include="IReaction.cs" />
