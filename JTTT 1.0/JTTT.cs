@@ -19,21 +19,20 @@ namespace JTTT_1._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Services s = Services.Instance;
+            var s = new HtmlService("http://demotywatory.pl");
 
-             s.Htmlservice.GetPctUrl("http://demotywatory.pl","tym");
-             string path = s.Htmlservice.Pcturl;
-             FileDownloader.DownloadImg(path);
+            string path = s.GetPctUrl("Hipnoza");
+            FileDownloader.DownloadImg(path);
             const string myEmailAddres = "zpompka666@gmail.com";
             const string myPassword = "klop0000";
             const string receiverAddres = "ziele3920@hotmail.com";
-            const string fileAtt = "JTTT 1.0.exe.config";
+            const string fileAtt = "obrazek.jpg";
 
 
-            //IEmailService emailService = new SMTPService(gmailConfig.server, gmailConfig.port, myEmailAddres, myPassword);
-           // SimpleMsg msg = new SimpleMsg(myEmailAddres, receiverAddres, "Testing SimpleMsg", "SimpleMsg working!");
-            //emailService.Send(msg);
-           // SingleMsgWithAttachment msgA = new SingleMsgWithAttachment(myEmailAddres, receiverAddres, fileAtt, "Message with attachment test", "Message with Attachment Working!");
+            IEmailService emailService = new SMTPService(gmailConfig.server, gmailConfig.port, myEmailAddres, myPassword);
+           SimpleMsg msg = new SimpleMsg(myEmailAddres, receiverAddres, "Testing SimpleMsg", "SimpleMsg working!");
+            emailService.Send(msg);
+            //SingleMsgWithAttachment msgA = new SingleMsgWithAttachment(myEmailAddres, receiverAddres, fileAtt, "Message with attachment test", "Message with Attachment Working!");
             //emailService.Send(msgA);
         }
     }

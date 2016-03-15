@@ -7,9 +7,9 @@ namespace JTTT_1._0
 {
     public static class FileDownloader
     {
-       public static string DownloadImg(string src)
+       static public string DownloadImg(string src)
         {
-             var filepath = System.IO.Path.GetTempPath() + Guid.NewGuid() + ".jpg";
+             var filepath = "obrazek.jpg";
              using (var wc = new WebClient() )
                  wc.DownloadFile(src,filepath);
              return filepath;
