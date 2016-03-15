@@ -21,7 +21,7 @@ namespace JTTT_1._0
 
             try 
             {
-                client.Send(message.Message);
+                client.SendMailAsync(message.Message);
             }
             catch (Exception ex)
             {
