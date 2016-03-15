@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using HtmlAgilityPack;
 using System.Net;
 
 namespace JTTT_1._0
 {
-    class HtmlService:IAction
+    internal class HtmlService:IAction
     {
         private readonly string _url ;
         private readonly string _keyWord;

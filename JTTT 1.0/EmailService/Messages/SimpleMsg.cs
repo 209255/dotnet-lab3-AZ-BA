@@ -6,7 +6,7 @@ namespace JTTT_1._0
     {
         public SimpleMsg(string receiverEmail, string subject, string body)
         {
-            message = new MailMessage(SMTPService.DefaultEmailSender, receiverEmail);
+            Message = new MailMessage(SMTPService.DefaultEmailSender, receiverEmail);
             AddSubjectAndBody(subject, body);
         }
     }

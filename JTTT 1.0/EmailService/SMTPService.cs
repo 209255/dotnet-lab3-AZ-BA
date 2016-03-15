@@ -21,7 +21,7 @@ namespace JTTT_1._0
 
             try 
             {
-                client.Send(message.message);
+                client.Send(message.Message);
             }
             catch (Exception ex)
             {

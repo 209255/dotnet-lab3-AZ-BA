@@ -7,14 +7,14 @@ namespace JTTT_1._0
     {
         public SingleMsgWithAttachment(string receiverEmail, string filePath, string subject, string body)
         {
-            message = new MailMessage(SMTPService.DefaultEmailSender, receiverEmail);
+            Message = new MailMessage(SMTPService.DefaultEmailSender, receiverEmail);
             AddSubjectAndBody(subject, body);
-            message.Attachments.Add(LoadAtatchment(filePath));
+            Message.Attachments.Add(LoadAtatchment(filePath));
         }
 
         Attachment LoadAtatchment(string file)
         {
-            // Create  the file attachment for this e-mail message.
+            // Create  the file attachment for this e-mail Message.
             Attachment data = new Attachment(file, MediaTypeNames.Application.Octet);
             // Add time stamp information for the file.
             ContentDisposition disposition = data.ContentDisposition;
