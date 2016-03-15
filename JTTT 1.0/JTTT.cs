@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace JTTT_1._0
@@ -19,21 +12,26 @@ namespace JTTT_1._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var s = new HtmlService("http://demotywatory.pl");
+            var s = new HtmlService(URL.Text.Contains("http://")? URL.Text: "http://"+URL.Text);
 
-            string path = s.GetPctUrl("Hipnoza");
+            string path = s.GetPctUrl(KeyWord.Text);
             FileDownloader.DownloadImg(path);
             const string myEmailAddres = "zpompka666@gmail.com";
             const string myPassword = "klop0000";
-            const string receiverAddres = "ziele3920@hotmail.com";
-            const string fileAtt = "obrazek.jpg";
 
+            string receiverAddres = EmailAdress.Text;
+            string fileAtt = "obrazek.jpg";
+            string emailBody = "To jest obrazek ze strony " + URL.Text + " zawierający słowo klucz \"" + KeyWord.Text + "\"";
+            string subject = "Very important message";
 
             IEmailService emailService = new SMTPService(gmailConfig.server, gmailConfig.port, myEmailAddres, myPassword);
-           SimpleMsg msg = new SimpleMsg(myEmailAddres, receiverAddres, "Testing SimpleMsg", "SimpleMsg working!");
-            emailService.Send(msg);
-            //SingleMsgWithAttachment msgA = new SingleMsgWithAttachment(myEmailAddres, receiverAddres, fileAtt, "Message with attachment test", "Message with Attachment Working!");
-            //emailService.Send(msgA);
+            SingleMsgWithAttachment msgA = new SingleMsgWithAttachment(myEmailAddres, receiverAddres, fileAtt, subject, emailBody);
+            emailService.Send(msgA);
+        }
+
+        private void URL_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

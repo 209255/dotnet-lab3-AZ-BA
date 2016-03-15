@@ -48,6 +48,7 @@
             this.URL.Name = "URL";
             this.URL.Size = new System.Drawing.Size(147, 20);
             this.URL.TabIndex = 0;
+            this.URL.TextChanged += new System.EventHandler(this.URL_TextChanged);
             // 
             // label1
             // 
