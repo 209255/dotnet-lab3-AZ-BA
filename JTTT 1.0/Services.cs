@@ -19,17 +19,12 @@ namespace JTTT_1._0
         {
             get { return _instance ?? (_instance = new Services()); }
         }
-
         
-
         private static Services _instance;
-
-        public IEmailService EmailService;
-
-       
+               
         private Services()
         {
-            EmailService = new SMTPService();
+         
         }
     }
 }
