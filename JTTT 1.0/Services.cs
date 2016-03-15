@@ -2,7 +2,7 @@
 
 namespace JTTT_1._0
 {
-    public class Services
+    class Services
     {
         class ActionReactionPair
         {
@@ -22,9 +22,11 @@ namespace JTTT_1._0
         
         private static Services _instance;
                
+        public LoggerService logger;
+
         private Services()
         {
-         
+            logger = new LoggerService();
         }
     }
 }

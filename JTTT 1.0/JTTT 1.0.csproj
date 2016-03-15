@@ -55,6 +55,7 @@
     <Compile Include="EmailService\SMTPConfig\gmailConfig.cs" />
     <Compile Include="EmailService\SMTPService.cs" />
     <Compile Include="FileDownloader.cs" />
+    <Compile Include="FileWritter.cs" />
     <Compile Include="HtmlService\HtmlService.cs" />
     <Compile Include="IAction.cs" />
     <Compile Include="IReaction.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="JTTT.Designer.cs">
       <DependentUpon>JTTT.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoggerService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.cs" />
