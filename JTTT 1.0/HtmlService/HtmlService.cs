@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HtmlAgilityPack;
@@ -6,46 +7,53 @@ using System.Net;
 
 namespace JTTT_1._0
 {
-    internal class HtmlService:IAction
+    public class HtmlService
     {
-        private readonly string _url ;
-        private readonly string _keyWord;
-        private List<string> _pcturl 
+        
+        public string Pcturl
         {
-            get { return _pcturl; }
+            get { return Pcturl; }
+            set
+            {
+                if (value == null) throw new ArgumentNullException("value");
+                Pcturl = value;
+            }
         }
-        public HtmlService(string url, string word)
+
+        public string GetPageHtml(string url)
         {
-            _url = url.StartsWith("http://") ? url : "http://" + url;
-            _keyWord =  word.ToLower();
-        }
-        private string GetPageHtml()
-        {
+            Console.WriteLine("wchodze!!!!!!!!!!!!!!!!!@@@@@@@@@@@@2");
             using (var wc = new WebClient())
             {
                 wc.Encoding = Encoding.UTF8;
-                var html = WebUtility.HtmlDecode(wc.DownloadString(_url));
+                var html = WebUtility.HtmlDecode(wc.DownloadString(url));
+                Console.WriteLine("wczutalem");
                 return html;
             }
+            
         }
 
-        private void GetPctUrl()
+        public void GetPctUrl(string url, string keyWord)
         {
             var doc = new HtmlDocument();
-            var pageHtml = GetPageHtml();
+            var pageHtml = GetPageHtml(url);
             doc.LoadHtml(pageHtml);
             var nodes = doc.DocumentNode.Descendants("img");
-            foreach (var src in from node in nodes let alt 
-             = node.GetAttributeValue("alt", "") let src = node.GetAttributeValue("src", "")
-             where alt.ToLower().Contains(_keyWord) select src)
+            foreach (var node in nodes)
             {
-                _pcturl.Add(src);
+                var alt = node.GetAttributeValue("alt", "");
+                var src = node.GetAttributeValue("src", "");
+                if (alt.ToLower().Contains(keyWord))
+                 {
+                    Pcturl = src;
+                    Console.WriteLine("Znalazlem!!!!!!!!!!!!!!!@@@@@");
+                     break;
+                 }
+               
             }
+            Console.WriteLine("nie znalazlem Znalazlem!!!!!!!!!!!!!!!@@@@@");
         }
 
-        public void CheckCondition()
-        {
-            GetPctUrl();
-        }
+      
     }
 }

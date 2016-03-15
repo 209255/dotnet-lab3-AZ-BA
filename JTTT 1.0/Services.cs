@@ -21,10 +21,10 @@ namespace JTTT_1._0
         }
         
         private static Services _instance;
-               
+        public HtmlService Htmlservice;
         private Services()
         {
-         
+          Htmlservice = new HtmlService();
         }
     }
 }
