@@ -9,30 +9,30 @@ namespace JTTT_1._0
 {
     public class HtmlService
     {
-        private readonly string _url;
+        //private readonly string _url;
 
-        public HtmlService(string url)
-        {
-            this._url = url;
-        }
+        //public HtmlService(string url)
+        //{
+        //    this._url = url;
+        //}
       
-        public string GetPageHtml()
+        string GetPageHtml(string url)
         {
             
             using (var wc = new WebClient())
             {
                 wc.Encoding = Encoding.UTF8;
-                var html = WebUtility.HtmlDecode(wc.DownloadString(_url));
+                var html = WebUtility.HtmlDecode(wc.DownloadString(url));
                 return html;
             }
             
         }
 
-        public string GetPctUrl(string keyWord)
+        public string GetPctUrl(string url,  string keyWord)
         {
             string path = null;
             var doc = new HtmlDocument();
-            var pageHtml = GetPageHtml();
+            var pageHtml = GetPageHtml(url);
             doc.LoadHtml(pageHtml);
             var nodes = doc.DocumentNode.Descendants("img");
             foreach (var node in nodes)

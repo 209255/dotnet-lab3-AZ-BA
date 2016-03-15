@@ -12,9 +12,10 @@ namespace JTTT_1._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var s = new HtmlService(URL.Text.Contains("http://")? URL.Text: "http://"+URL.Text);
+            var htmlService = Services.Instance.htmlservice;
 
-            string path = s.GetPctUrl(KeyWord.Text);
+            string path = htmlService.GetPctUrl(URL.Text.Contains("http://") ? URL.Text : "http://" + URL.Text, 
+                                      KeyWord.Text);
             FileDownloader.DownloadImg(path);
             const string myEmailAddres = "zpompka666@gmail.com";
             const string myPassword = "klop0000";
