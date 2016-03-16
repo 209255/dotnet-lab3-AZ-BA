@@ -9,13 +9,6 @@ namespace JTTT_1._0
 {
     public class HtmlService
     {
-        //private readonly string _url;
-
-        //public HtmlService(string url)
-        //{
-        //    this._url = url;
-        //}
-      
         string GetPageHtml(string url)
         {
             
@@ -30,25 +23,14 @@ namespace JTTT_1._0
 
         public string GetPctUrl(string url,  string keyWord)
         {
-            string path = null;
             var doc = new HtmlDocument();
             var pageHtml = GetPageHtml(url);
             doc.LoadHtml(pageHtml);
             var nodes = doc.DocumentNode.Descendants("img");
-            foreach (var node in nodes)
-            {
-                var alt = node.GetAttributeValue("alt", "");
-                var src = node.GetAttributeValue("src", "");
-                if (alt.ToLower().Contains(keyWord.ToLower()))
-                 {
-                   path = src;
-                   Console.WriteLine("Znalazlem!!!!!!!!!!!!!!!@@@@@");
-                     break;
-                 }
-               
-            }
-            Console.WriteLine("nie znalazlem Znalazlem!!!!!!!!!!!!!!!@@@@@");
-            return path;
+            return (from node in nodes 
+                    let alt = node.GetAttributeValue("alt", "") 
+                    let src = node.GetAttributeValue("src", "")
+                    where alt.ToLower().Contains(keyWord.ToLower()) select src).FirstOrDefault();
         }
 
       
