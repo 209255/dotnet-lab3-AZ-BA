@@ -11,6 +11,7 @@ namespace JTTT_1._0
         [STAThread]
         static void Main()
         {
+            ActionsProducer producer = new ActionsProducer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new JTTT());

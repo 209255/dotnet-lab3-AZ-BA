@@ -12,10 +12,13 @@ namespace JTTT_1._0
             using (var wc = new WebClient())
             {
                 try {
+                    Console.WriteLine(src);
                     wc.DownloadFile(src, filepath);
+                    Console.WriteLine("download@@@@");
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine("nicht download@@@@@@@@@@@");
                     Console.Error.WriteLine("Cannot download image from " + src);
                 }
             }
