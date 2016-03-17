@@ -2,6 +2,10 @@
 {
     class ActionsProducer
     {
-        FindImgByKeyInDescription a1 = new FindImgByKeyInDescription();
+        private FindImgByKeyInDescription _a1;
+        public ActionsProducer()
+        {
+            _a1 = new FindImgByKeyInDescription();
+        }
     }
 }

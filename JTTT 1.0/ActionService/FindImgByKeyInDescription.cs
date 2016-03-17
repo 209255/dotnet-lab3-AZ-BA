@@ -14,12 +14,9 @@ namespace JTTT_1._0
 
             string path = htmlService.GetPctUrl(url.Contains("http://") ? url : "http://" + url,
                                       key);
-            FileDownloader.DownloadImg("http://www.demotywatory.pl"+path);
+            FileDownloader.DownloadImg(path);
    
             string fileAtt = "obrazek.jpg";
-
-            
-
             return fileAtt;
         }
 

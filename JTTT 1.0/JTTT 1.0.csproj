@@ -61,7 +61,7 @@
     <Compile Include="FileDownloader.cs" />
     <Compile Include="FileWritter.cs" />
     <Compile Include="HtmlService\HtmlService.cs" />
-    <Compile Include="IReaction.cs" />
+    <Compile Include="ReactionService\IReaction.cs" />
     <Compile Include="JTTT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +71,9 @@
     <Compile Include="LoggerService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReactionService\ReactionProducer.cs" />
+    <Compile Include="ReactionService\ReactionRegister.cs" />
+    <Compile Include="ReactionService\SendEmailWithAtt.cs" />
     <Compile Include="Services.cs" />
     <EmbeddedResource Include="JTTT.resx">
       <DependentUpon>JTTT.cs</DependentUpon>

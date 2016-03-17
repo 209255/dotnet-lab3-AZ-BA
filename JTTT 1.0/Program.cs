@@ -12,6 +12,7 @@ namespace JTTT_1._0
         static void Main()
         {
             ActionsProducer producer = new ActionsProducer();
+            ReactionProducer reaction = new ReactionProducer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new JTTT());

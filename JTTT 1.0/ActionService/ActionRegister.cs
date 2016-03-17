@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace JTTT_1._0
 {
@@ -18,10 +19,7 @@ namespace JTTT_1._0
 
         public List<string> GetActionNames()
         {
-            List<string> names = new List<string>();
-            foreach (var action in reg)
-                names.Add(action.Key);
-            return names;
+            return reg.Select(action => action.Key).ToList();
         }
 
         public ActionRegister()

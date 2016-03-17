@@ -6,9 +6,9 @@ namespace JTTT_1._0
 {
     public static class FileDownloader
     {
-       static public string DownloadImg(string src)
+       public static string DownloadImg(string src)
         {
-             var filepath = "obrazek.jpg";
+            const string filepath = "obrazek.jpg";
             using (var wc = new WebClient())
             {
                 try {
@@ -19,7 +19,7 @@ namespace JTTT_1._0
                 catch (Exception e)
                 {
                     Console.WriteLine("nicht download@@@@@@@@@@@");
-                    Console.Error.WriteLine("Cannot download image from " + src);
+                    Console.WriteLine("Cannot download image from " + src);
                 }
             }
              return filepath;
