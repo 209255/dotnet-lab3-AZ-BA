@@ -4,11 +4,11 @@ namespace JTTT_1._0
 { 
     class FindImgByKeyInDescription : IAction
     {
-        const string actionName = "Find key word in desription -> email";
+        const string ActionName = "Find key word in desription -> email";
 
         public string DoAction(string url, string key)
         {
-            Services.Instance.logger.AddAction(actionName  + "\t" + url + "\t" + key);
+            Services.Instance.logger.AddAction(ActionName  + "\t" + url + "\t" + key);
 
             var htmlService = Services.Instance.htmlservice;
 
@@ -22,7 +22,7 @@ namespace JTTT_1._0
 
         public string GetActionName()
         {
-            return actionName;
+            return ActionName;
         }
 
         public FindImgByKeyInDescription()

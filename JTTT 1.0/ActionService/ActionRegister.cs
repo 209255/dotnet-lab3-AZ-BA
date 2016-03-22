@@ -5,7 +5,7 @@ namespace JTTT_1._0
 {
     class ActionRegister
     {
-        Dictionary<string, IAction> reg;
+        readonly Dictionary<string, IAction> reg;
 
         public void RegisterAction(IAction action)
         {
