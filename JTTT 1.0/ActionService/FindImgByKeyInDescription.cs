@@ -4,13 +4,14 @@ namespace JTTT_1._0
 { 
     class FindImgByKeyInDescription : IAction
     {
+        private readonly string _keyWord;
+        private readonly string _url;
         const string ActionName = "Find key word in desription -> email";
-
         public string DoAction(string url, string key)
         {
-            Services.Instance.logger.AddAction(ActionName  + "\t" + url + "\t" + key);
+            Services.Instance.Logger.AddAction(ActionName  + "\t" + url + "\t" + key);
 
-            var htmlService = Services.Instance.htmlservice;
+            var htmlService = Services.Instance.Htmlservice;
 
             string path = htmlService.GetPctUrl(url.Contains("http://") ? url : "http://" + url,
                                       key);
@@ -27,7 +28,7 @@ namespace JTTT_1._0
 
         public FindImgByKeyInDescription()
         {
-            Services.Instance.actionRegister.RegisterAction(this);
+            Services.Instance.ActionRegister.RegisterAction(this);
         }
     }
 }

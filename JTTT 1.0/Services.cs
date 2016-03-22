@@ -22,17 +22,17 @@ namespace JTTT_1._0
         
         private static Services _instance;
 
-        public HtmlService htmlservice;
-        public LoggerService logger;
-        public ActionRegister actionRegister;
-        public ReactionRegister reactionRegister;
+        public HtmlService Htmlservice;
+        public LoggerService Logger;
+        public ActionRegister ActionRegister;
+        public ReactionRegister ReactionRegister;
 
         private Services()
         {
-            logger = new LoggerService();
-            htmlservice = new HtmlService();
-            actionRegister = new ActionRegister();
-            reactionRegister = new ReactionRegister();
+            Logger = new LoggerService();
+            Htmlservice = new HtmlService();
+            ActionRegister = new ActionRegister();
+            ReactionRegister = new ReactionRegister();
         }               
     }
 }

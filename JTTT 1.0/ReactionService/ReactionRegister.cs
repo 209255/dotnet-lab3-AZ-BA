@@ -5,7 +5,7 @@ namespace JTTT_1._0
 {
     class ReactionRegister
     {
-        Dictionary<string, IReaction> _reg;
+        readonly Dictionary<string, IReaction> _reg;
 
         public void RegisterReaction(IReaction reaction)
         {

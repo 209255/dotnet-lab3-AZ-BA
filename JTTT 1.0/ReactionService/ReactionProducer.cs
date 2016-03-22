@@ -2,7 +2,7 @@
 {
     public class ReactionProducer
     {
-        SendEmailWithAtt _r1;
+        private SendEmailWithAtt _r1;
 
         public ReactionProducer()
         {

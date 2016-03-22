@@ -12,11 +12,7 @@ namespace JTTT_1._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
-            string fileAtt = Services.Instance.actionRegister.GetAction(comboBox1.Text).DoAction(URL.Text, KeyWord.Text);
-            
-           
+            string fileAtt = Services.Instance.ActionRegister.GetAction(comboBox1.Text).DoAction(URL.Text, KeyWord.Text);
         }
 
         private void URL_TextChanged(object sender, EventArgs e)
@@ -25,6 +21,11 @@ namespace JTTT_1._0
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

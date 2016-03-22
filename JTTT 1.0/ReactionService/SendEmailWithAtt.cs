@@ -4,10 +4,10 @@ namespace JTTT_1._0
 {
     public class SendEmailWithAtt : IReaction
     {
-        private const string _reactionName = "Send Email with Attachment";
+        private const string ReactionName = "Send Email with Attachment";
         public string GetReactionName()
         {
-            return _reactionName;
+            return ReactionName;
         }
 
         public void DoReaction(string url, string filepath, string emailAdd, string keyword)

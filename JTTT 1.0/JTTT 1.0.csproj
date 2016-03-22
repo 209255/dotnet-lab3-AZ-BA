@@ -75,6 +75,8 @@
     <Compile Include="ReactionService\ReactionRegister.cs" />
     <Compile Include="ReactionService\SendEmailWithAtt.cs" />
     <Compile Include="Services.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="TaskManager.cs" />
     <EmbeddedResource Include="JTTT.resx">
       <DependentUpon>JTTT.cs</DependentUpon>
     </EmbeddedResource>
