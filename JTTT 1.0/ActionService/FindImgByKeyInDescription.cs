@@ -6,7 +6,7 @@ namespace JTTT_1._0
     {
         private readonly string _keyWord;
         private readonly string _url;
-        const string ActionName = "Find key word in desription -> email";
+        private const string ActionName = "Find key word in desription -> email";
         public string DoAction(string url, string key)
         {
             Services.Instance.Logger.AddAction(ActionName  + "\t" + url + "\t" + key);

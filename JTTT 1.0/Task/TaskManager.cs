@@ -17,6 +17,10 @@ namespace JTTT_1._0
             _tasksList = new BindingList<Task>();
         }
 
+        public BindingList<Task> Tasks
+        {
+            get { return _tasksList; }
+        }
         public void AddToList(Task t)
         {
             _tasksList.Add(t);

@@ -7,7 +7,7 @@ namespace JTTT_1._0
 {
     public class HtmlService
     {
-        string GetPageHtml(string url)
+        private static string GetPageHtml(string url)
         {
             
             using (var wc = new WebClient())

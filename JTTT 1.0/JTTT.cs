@@ -8,6 +8,7 @@ namespace JTTT_1._0
         public JTTT()
         {
             InitializeComponent();
+            TaskList.DataSource = Services.Instance.AllTasks.Tasks;
         }
 
         private void Execute_Click(object sender, EventArgs e)
