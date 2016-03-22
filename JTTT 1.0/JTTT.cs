@@ -10,24 +10,29 @@ namespace JTTT_1._0
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Execute_Click(object sender, EventArgs e)
         {
-            string fileAtt = Services.Instance.ActionRegister.GetAction(comboBox1.Text).DoAction(URL.Text, KeyWord.Text);
+            Services.Instance.AllTasks.ExecuteAll();
         }
 
-        private void URL_TextChanged(object sender, EventArgs e)
+        private void AddToList_Click(object sender, EventArgs e)
         {
-
+            //string fileAtt = Services.Instance.ActionRegister.GetAction(comboBox1.Text).DoAction(URL.Text, KeyWord.Text);
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Clear_Click(object sender, EventArgs e)
         {
-
+            Services.Instance.AllTasks.ClearAll();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Serialize_Click(object sender, EventArgs e)
         {
+            Services.Instance.AllTasks.Serialize();
+        }
 
+        private void DeSerialize_Click(object sender, EventArgs e)
+        {
+            Services.Instance.AllTasks.DeSerialize();
         }
     }
 }

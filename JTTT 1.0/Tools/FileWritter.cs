@@ -13,7 +13,7 @@ namespace JTTT_1._0
 
         public FileWritter()
         {
-            if (filepath == null || filepath.Length == 0)
+            if (string.IsNullOrEmpty(filepath))
                 filepath = Path.GetDirectoryName(Application.ExecutablePath);
         }
 

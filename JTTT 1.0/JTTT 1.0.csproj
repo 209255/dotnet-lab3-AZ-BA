@@ -58,8 +58,8 @@
     <Compile Include="EmailService\Messages\SingleMsgWithAttachment.cs" />
     <Compile Include="EmailService\SMTPConfig\gmailConfig.cs" />
     <Compile Include="EmailService\SMTPService.cs" />
-    <Compile Include="FileDownloader.cs" />
-    <Compile Include="FileWritter.cs" />
+    <Compile Include="Tools\FileDownloader.cs" />
+    <Compile Include="Tools\FileWritter.cs" />
     <Compile Include="HtmlService\HtmlService.cs" />
     <Compile Include="ReactionService\IReaction.cs" />
     <Compile Include="JTTT.cs">
@@ -75,8 +75,8 @@
     <Compile Include="ReactionService\ReactionRegister.cs" />
     <Compile Include="ReactionService\SendEmailWithAtt.cs" />
     <Compile Include="Services.cs" />
-    <Compile Include="Task.cs" />
-    <Compile Include="TaskManager.cs" />
+    <Compile Include="Task\Task.cs" />
+    <Compile Include="Task\TaskManager.cs" />
     <EmbeddedResource Include="JTTT.resx">
       <DependentUpon>JTTT.cs</DependentUpon>
     </EmbeddedResource>

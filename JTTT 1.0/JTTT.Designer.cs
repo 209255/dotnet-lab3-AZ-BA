@@ -40,16 +40,16 @@ namespace JTTT_1._0
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.EmailAdress = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddToList = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TaskList = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Execute = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
+            this.Serialize = new System.Windows.Forms.Button();
+            this.DeSerialize = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // URL
@@ -58,7 +58,6 @@ namespace JTTT_1._0
             this.URL.Name = "URL";
             this.URL.Size = new System.Drawing.Size(147, 20);
             this.URL.TabIndex = 0;
-            this.URL.TextChanged += new System.EventHandler(this.URL_TextChanged);
             // 
             // label1
             // 
@@ -137,26 +136,25 @@ namespace JTTT_1._0
             this.EmailAdress.Size = new System.Drawing.Size(147, 20);
             this.EmailAdress.TabIndex = 10;
             // 
-            // DodajDolisty
+            // AddToList
             // 
-            this.button1.Location = new System.Drawing.Point(78, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Dodaj do listy";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AddToList.Location = new System.Drawing.Point(78, 326);
+            this.AddToList.Name = "AddToList";
+            this.AddToList.Size = new System.Drawing.Size(149, 23);
+            this.AddToList.TabIndex = 11;
+            this.AddToList.Text = "Dodaj do listy";
+            this.AddToList.UseVisualStyleBackColor = true;
+            this.AddToList.Click += new System.EventHandler(this.AddToList_Click);
             // 
-            // Action
+            // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(78, 9);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(147, 21);
             this.comboBox1.TabIndex = 12;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Reaction
+            // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(78, 184);
@@ -188,58 +186,61 @@ namespace JTTT_1._0
             this.TaskList.Size = new System.Drawing.Size(327, 147);
             this.TaskList.TabIndex = 16;
             // 
-            // Wykonaj
+            // Execute
             // 
-            this.button2.Location = new System.Drawing.Point(349, 162);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 43);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Wykonaj";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Execute.Location = new System.Drawing.Point(349, 162);
+            this.Execute.Name = "Execute";
+            this.Execute.Size = new System.Drawing.Size(101, 43);
+            this.Execute.TabIndex = 17;
+            this.Execute.Text = "Wykonaj";
+            this.Execute.UseVisualStyleBackColor = true;
+            this.Execute.Click += new System.EventHandler(this.Execute_Click);
             // 
-            // Czysc
+            // Clear
             // 
-            this.button3.Location = new System.Drawing.Point(466, 162);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 43);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Czyść";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Clear.Location = new System.Drawing.Point(466, 162);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(101, 43);
+            this.Clear.TabIndex = 18;
+            this.Clear.Text = "Czyść";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Serialize
             // 
-            this.button4.Location = new System.Drawing.Point(575, 162);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 22);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Serialize";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Serialize.Location = new System.Drawing.Point(575, 162);
+            this.Serialize.Name = "Serialize";
+            this.Serialize.Size = new System.Drawing.Size(101, 22);
+            this.Serialize.TabIndex = 19;
+            this.Serialize.Text = "Serialize";
+            this.Serialize.UseVisualStyleBackColor = true;
+            this.Serialize.Click += new System.EventHandler(this.Serialize_Click);
             // 
-            // Deserialize
+            // DeSerialize
             // 
-            this.button5.Location = new System.Drawing.Point(575, 184);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 22);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Deserialize";
-            this.button5.UseVisualStyleBackColor = true;
+            this.DeSerialize.Location = new System.Drawing.Point(575, 184);
+            this.DeSerialize.Name = "DeSerialize";
+            this.DeSerialize.Size = new System.Drawing.Size(101, 22);
+            this.DeSerialize.TabIndex = 20;
+            this.DeSerialize.Text = "Deserialize";
+            this.DeSerialize.UseVisualStyleBackColor = true;
+            this.DeSerialize.Click += new System.EventHandler(this.DeSerialize_Click);
             // 
             // JTTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 371);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.DeSerialize);
+            this.Controls.Add(this.Serialize);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.Execute);
             this.Controls.Add(this.TaskList);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddToList);
             this.Controls.Add(this.URL);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -269,15 +270,15 @@ namespace JTTT_1._0
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox EmailAdress;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddToList;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox TaskList;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Execute;
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button Serialize;
+        private System.Windows.Forms.Button DeSerialize;
     }
 }

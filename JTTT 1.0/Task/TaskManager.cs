@@ -10,6 +10,7 @@ namespace JTTT_1._0
     class TaskManager
     {
         readonly BindingList<Task> _tasksList;
+        private readonly string _fileName;
 
         public TaskManager()
         {
@@ -32,6 +33,16 @@ namespace JTTT_1._0
         public void ClearAll()
         {
             _tasksList.Clear();
+        }
+
+        public void Serialize()
+        {
+            
+        }
+
+        public void DeSerialize()
+        {
+            
         }
     }
 }

@@ -21,18 +21,14 @@ namespace JTTT_1._0
         }
         
         private static Services _instance;
-
         public HtmlService Htmlservice;
         public LoggerService Logger;
-        public ActionRegister ActionRegister;
-        public ReactionRegister ReactionRegister;
-
+        public TaskManager AllTasks;
         private Services()
         {
             Logger = new LoggerService();
             Htmlservice = new HtmlService();
-            ActionRegister = new ActionRegister();
-            ReactionRegister = new ReactionRegister();
+            AllTasks = new TaskManager();
         }               
     }
 }
