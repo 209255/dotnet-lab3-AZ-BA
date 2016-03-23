@@ -31,18 +31,18 @@ namespace JTTT_1._0
         private void InitializeComponent()
         {
             this.URL = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.actionsLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.KeyWord = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.reactionsLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.EmailAdress = new System.Windows.Forms.TextBox();
             this.AddToList = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.actionsBox = new System.Windows.Forms.ComboBox();
+            this.reactionsBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TaskList = new System.Windows.Forms.ListBox();
@@ -59,14 +59,14 @@ namespace JTTT_1._0
             this.URL.Size = new System.Drawing.Size(147, 20);
             this.URL.TabIndex = 0;
             // 
-            // label1
+            // actionsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Jeżeli";
+            this.actionsLabel.AutoSize = true;
+            this.actionsLabel.Location = new System.Drawing.Point(4, 12);
+            this.actionsLabel.Name = "actionsLabel";
+            this.actionsLabel.Size = new System.Drawing.Size(33, 13);
+            this.actionsLabel.TabIndex = 1;
+            this.actionsLabel.Text = "Jeżeli";
             // 
             // label3
             // 
@@ -102,14 +102,14 @@ namespace JTTT_1._0
             this.KeyWord.Size = new System.Drawing.Size(147, 20);
             this.KeyWord.TabIndex = 6;
             // 
-            // label6
+            // reactionsLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 187);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "to wykonaj to:";
+            this.reactionsLabel.AutoSize = true;
+            this.reactionsLabel.Location = new System.Drawing.Point(3, 187);
+            this.reactionsLabel.Name = "reactionsLabel";
+            this.reactionsLabel.Size = new System.Drawing.Size(73, 13);
+            this.reactionsLabel.TabIndex = 7;
+            this.reactionsLabel.Text = "to wykonaj to:";
             // 
             // label7
             // 
@@ -146,21 +146,22 @@ namespace JTTT_1._0
             this.AddToList.UseVisualStyleBackColor = true;
             this.AddToList.Click += new System.EventHandler(this.AddToList_Click);
             // 
-            // comboBox1
+            // actionsBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(78, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 21);
-            this.comboBox1.TabIndex = 12;
+            this.actionsBox.FormattingEnabled = true;
+            this.actionsBox.Location = new System.Drawing.Point(78, 9);
+            this.actionsBox.Name = "actionsBox";
+            this.actionsBox.Size = new System.Drawing.Size(147, 21);
+            this.actionsBox.TabIndex = 12;
+            this.actionsBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // reactionsBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(78, 184);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(147, 21);
-            this.comboBox2.TabIndex = 13;
+            this.reactionsBox.FormattingEnabled = true;
+            this.reactionsBox.Location = new System.Drawing.Point(78, 184);
+            this.reactionsBox.Name = "reactionsBox";
+            this.reactionsBox.Size = new System.Drawing.Size(147, 21);
+            this.reactionsBox.TabIndex = 13;
             // 
             // label9
             // 
@@ -238,18 +239,18 @@ namespace JTTT_1._0
             this.Controls.Add(this.TaskList);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.reactionsBox);
+            this.Controls.Add(this.actionsBox);
             this.Controls.Add(this.AddToList);
             this.Controls.Add(this.URL);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.reactionsLabel);
             this.Controls.Add(this.KeyWord);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.actionsLabel);
             this.Controls.Add(this.EmailAdress);
             this.Name = "JTTT";
             this.Text = "JTTT";
@@ -261,18 +262,18 @@ namespace JTTT_1._0
         #endregion
 
         private System.Windows.Forms.TextBox URL;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label actionsLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox KeyWord;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label reactionsLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox EmailAdress;
         private System.Windows.Forms.Button AddToList;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox actionsBox;
+        private System.Windows.Forms.ComboBox reactionsBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox TaskList;

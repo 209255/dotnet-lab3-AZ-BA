@@ -24,11 +24,14 @@ namespace JTTT_1._0
         public HtmlService Htmlservice;
         public LoggerService Logger;
         public TaskManager AllTasks;
+        public ActionRegister ActionRegister;
+
         private Services()
         {
             Logger = new LoggerService();
             Htmlservice = new HtmlService();
             AllTasks = new TaskManager();
+            ActionRegister = new ActionRegister();
         }               
     }
 }
