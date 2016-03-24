@@ -4,17 +4,17 @@ namespace JTTT_1._0
 { 
     class FindImgByKeyInDescription : IAction
     {
-        private readonly string _keyWord;
-        private readonly string _url;
+
         private const string ActionName = "Find key word in desription -> email";
-        public string DoAction(string url, string key)
+        public string DoAction(Model model)
         {
-            Services.Instance.Logger.AddAction(ActionName  + "\t" + url + "\t" + key);
+            var myModel = model as MFindImgByKeyInDescription;
+            Services.Instance.Logger.AddAction(ActionName  + "\t" +  myModel.URL + "\t" + myModel.KeyWord);
 
             var htmlService = Services.Instance.Htmlservice;
 
-            string path = htmlService.GetPctUrl(url.Contains("http://") ? url : "http://" + url,
-                                      key);
+            string path = htmlService.GetPctUrl(myModel.URL.Contains("http://") ? myModel.URL : "http://" + myModel.URL,
+                                      myModel.KeyWord);
             FileDownloader.DownloadImg(path);
    
             string fileAtt = "obrazek.jpg";
@@ -29,6 +29,11 @@ namespace JTTT_1._0
         public FindImgByKeyInDescription()
         {
             Services.Instance.ActionRegister.RegisterAction(this);
+        }
+
+        public Model GetEmptyModel()
+        {
+            return new MFindImgByKeyInDescription();
         }
     }
 }

@@ -52,6 +52,8 @@
     <Compile Include="ActionService\ActionsProducer.cs" />
     <Compile Include="ActionService\FindImgByKeyInDescription.cs" />
     <Compile Include="ActionService\IAction.cs" />
+    <Compile Include="ActionService\MFindImgByKeyInDescription.cs" />
+    <Compile Include="ActionService\Model.cs" />
     <Compile Include="EmailService\Messages\EmailMsg.cs" />
     <Compile Include="EmailService\IEmailService.cs" />
     <Compile Include="EmailService\Messages\SimpleMsg.cs" />
