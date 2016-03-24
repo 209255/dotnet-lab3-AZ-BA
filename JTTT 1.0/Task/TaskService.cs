@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace JTTT_1._0
 {
-    class TaskManager
+    class TaskService
     {
         readonly BindingList<Task> _tasksList;
         private readonly string _fileName;
 
-        public TaskManager()
+        public TaskService()
         {
             _tasksList = new BindingList<Task>();
         }

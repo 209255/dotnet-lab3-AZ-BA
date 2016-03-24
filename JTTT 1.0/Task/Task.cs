@@ -1,19 +1,26 @@
 ﻿namespace JTTT_1._0
 {
-    abstract class Task
+    class Task
     {
-        protected string ActionName;
-        protected string ReactionName;
-        protected Model ActionModel;
-        protected string Name;
+        public IAction Action { get; private set; }
+        public IReaction Reaction { get; private set; }
+        public Model ActionModel { get; private set; }
+        public Model ReactionModel { get; private set; }
+        public string Name { get; private set; }
 
-        protected Task(string name)
+        public Task(IAction action, Model actionModel, IReaction reaction, Model reactionModel)
         {
-            Name = name;
+            Action = action;
+            Reaction = reaction;
+            ActionModel = actionModel;
+            Name = $"Action: {Action.GetActionName()} \nReaction: {Reaction.GetReactionName()}"; 
         }
 
         public bool Execute()
         {
+            var rModel = ReactionModel as MDowdnloadImgSendEmai;
+            rModel.ImgURL = Action.DoAction(ActionModel);
+            Reaction.DoReaction(rModel);
             return true;
         }
     }
