@@ -162,6 +162,7 @@ namespace JTTT_1._0
             this.reactionsBox.Name = "reactionsBox";
             this.reactionsBox.Size = new System.Drawing.Size(147, 21);
             this.reactionsBox.TabIndex = 13;
+            this.reactionsBox.SelectedIndexChanged += new System.EventHandler(this.reactionsBox_SelectedIndexChanged);
             // 
             // label9
             // 

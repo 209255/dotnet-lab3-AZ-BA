@@ -5,5 +5,6 @@
     {
         string GetReactionName();
         void DoReaction(Model model);
+        Model GetEmptyModel();
     }
 }

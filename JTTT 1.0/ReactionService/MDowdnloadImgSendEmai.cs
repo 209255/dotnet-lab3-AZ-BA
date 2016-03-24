@@ -2,8 +2,8 @@
 {
     class MDowdnloadImgSendEmai : Model
     {
-        public string URL { get; private set; }
-        public string EmailReceiverAddress { get; private set; }
+        public string URL { get; set; }
+        public string EmailReceiverAddress { get; set; }
         public string ImgURL { get; set; }
     }
 }

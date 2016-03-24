@@ -24,5 +24,15 @@ namespace JTTT_1._0
             SingleMsgWithAttachment msgA = new SingleMsgWithAttachment(myEmailAddres, myModel.EmailReceiverAddress, imgPath, subject, emailBody);
             emailService.Send(msgA);
         }
+
+        public DowdnloadImgSendEmai()
+        {
+            Services.Instance.ReactionRegister.RegisterReaction(this);
+        }
+
+        public Model GetEmptyModel()
+        {
+            return new MDowdnloadImgSendEmai();
+        }
     }
 }

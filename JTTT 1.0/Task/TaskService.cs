@@ -16,7 +16,7 @@ namespace JTTT_1._0
         {
             get { return _tasksList; }
         }
-        public void AddToList(Task t)
+        public void AddTask(Task t)
         {
             _tasksList.Add(t);
         }
@@ -25,7 +25,7 @@ namespace JTTT_1._0
         {
             foreach (var t in _tasksList)
             {
-                t.CheckAndExecute();
+                t.Execute();
             }
         }
 

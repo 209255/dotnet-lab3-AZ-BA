@@ -2,11 +2,11 @@
 {
     public class ReactionProducer
     {
-        private SendEmailWithAtt _r1;
+        private DowdnloadImgSendEmai _r1;
 
         public ReactionProducer()
         {
-            _r1 = new SendEmailWithAtt();
+            _r1 = new DowdnloadImgSendEmai();
             
         }
     }

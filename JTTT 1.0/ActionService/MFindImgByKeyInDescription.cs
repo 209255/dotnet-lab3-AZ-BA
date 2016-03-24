@@ -4,5 +4,6 @@
     {
         public string URL { get; set; }
         public string KeyWord { get; set; }
+
     }
 }
