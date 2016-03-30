@@ -44,7 +44,7 @@ namespace JTTT_1._0
 
         private void DeSerialize_Click(object sender, EventArgs e)
         {
-            Services.Instance.Tasks.DeSerialize();
+            Services.Instance.Tasks.Deserialize();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

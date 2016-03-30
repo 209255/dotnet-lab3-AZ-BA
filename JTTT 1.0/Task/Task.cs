@@ -1,5 +1,8 @@
-﻿namespace JTTT_1._0
+﻿using System;
+
+namespace JTTT_1._0
 {
+    [Serializable]
     class Task
     {
         public IAction Action { get; private set; }
@@ -14,7 +17,7 @@
             Reaction = reaction;
             ActionModel = actionModel;
             ReactionModel = reactionModel;
-            Name = $"Action: {Action.GetActionName()} \nReaction: {Reaction.GetReactionName()}"; 
+            Name = String.Format("Action: {0} \nReaction: {1}", Action.GetActionName(), Reaction.GetReactionName()); 
         }
 
         public override string ToString()

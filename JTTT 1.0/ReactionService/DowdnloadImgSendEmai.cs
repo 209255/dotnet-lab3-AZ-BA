@@ -1,7 +1,9 @@
-﻿using System.Linq.Expressions;
+﻿using System;
+using System.Linq.Expressions;
 
 namespace JTTT_1._0
 {
+    [Serializable]
     class DowdnloadImgSendEmai : IReaction
     {
         private const string ReactionName = "Send Email with Attachment";

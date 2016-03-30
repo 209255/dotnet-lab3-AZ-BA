@@ -2,6 +2,7 @@
 
 namespace JTTT_1._0
 { 
+    [Serializable]
     class FindImgByKeyInDescription : IAction
     {
 

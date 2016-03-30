@@ -12,6 +12,7 @@ namespace JTTT_1._0
         public TaskService()
         {
             _tasksList = new BindingList<Task>();
+            _fileName = "serialize.txt";
         }
 
         public BindingList<Task> Tasks

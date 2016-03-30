@@ -1,5 +1,8 @@
-﻿namespace JTTT_1._0
+﻿using System;
+
+namespace JTTT_1._0
 {
+    [Serializable]
     class MFindImgByKeyInDescription : Model
     {
         public string URL { get; set; }
