@@ -1,32 +1,31 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace JTTT_1._0
 {
     class TaskService
     {
-        readonly BindingList<Task> _tasksList;
-        private readonly string _fileName;
+        private string _serialize;
 
         public TaskService()
         {
-            _tasksList = new BindingList<Task>();
-            _fileName = "serialize.txt";
+            Tasks = new BindingList<Task>();
+            _serialize = null;
         }
 
-        public BindingList<Task> Tasks
-        {
-            get { return _tasksList; }
-        }
+        public BindingList<Task> Tasks { get; }
+
         public void AddTask(Task t)
         {
-            _tasksList.Add(t);
+            Tasks.Add(t);
         }
 
         public void ExecuteAll()
         {
-            foreach (var t in _tasksList)
+            foreach (var t in Tasks)
             {
                 t.Execute();
             }
@@ -34,31 +33,48 @@ namespace JTTT_1._0
 
         public void ClearAll()
         {
-            _tasksList.Clear();
+            Tasks.Clear();
         }
 
         public void Serialize()
         {
-            Stream stream = File.Open(_fileName, FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(stream, _tasksList);
-            stream.Close();
+            if (!Tasks.GetType().IsSerializable) return;
+            try
+            {
+                using (var stream = new MemoryStream())
+                {
+                    new BinaryFormatter().Serialize(stream, Tasks);
+                    _serialize = Convert.ToBase64String(stream.ToArray());
+                }
+            }
+            catch (SerializationException e)
+            {
+                Console.WriteLine(@"Failed to serialization: " + e.Message);
+                throw;
+            }
         }
 
         public void Deserialize()
         {
-            if (!File.Exists(_fileName)) return;
-            Stream stream = File.Open(_fileName, FileMode.Open);
-            BinaryFormatter formatter = new BinaryFormatter();
-            _tasksList.Clear();
-            BindingList<Task> loaded = (BindingList<Task>)formatter.Deserialize(stream);
-
-            foreach (var t in loaded)
+            Tasks.Clear();
+            try
             {
-                _tasksList.Add(t);
+                var bytes = Convert.FromBase64String(_serialize);
+                BindingList<Task> temp;
+                using (var str = new MemoryStream(bytes))
+                {
+                    temp = (BindingList<Task>) new BinaryFormatter().Deserialize(str);
+                }
+                foreach (var t in temp)
+                {
+                    Tasks.Add(t);
+                }
             }
-
-            stream.Close();
+            catch (SerializationException e)
+            {
+                Console.WriteLine(@"failed to deserializaton: " + e.Message);
+                throw;
+            }
         }
     }
 }

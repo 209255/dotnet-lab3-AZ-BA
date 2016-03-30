@@ -11,13 +11,13 @@ namespace JTTT_1._0
         public Model ReactionModel { get; private set; }
         public string Name { get; private set; }
 
-        public Task(IAction action, IReaction reaction, Model actionModel, Model reactionModel)
+        public Task(IAction action, IReaction reaction, Model actionModel, Model reactionModel,string name)
         {
             Action = action;
             Reaction = reaction;
             ActionModel = actionModel;
             ReactionModel = reactionModel;
-            Name = String.Format("Action: {0} \nReaction: {1}", Action.GetActionName(), Reaction.GetReactionName()); 
+            Name = $"TaskName = {name} Action = {Action.GetActionName()} \nReaction = {Reaction.GetReactionName()}"; 
         }
 
         public override string ToString()
@@ -28,6 +28,7 @@ namespace JTTT_1._0
         public bool Execute()
         {
             var rModel = ReactionModel as MDowdnloadImgSendEmai;
+            if (rModel == null) return false;
             rModel.ImgURL = Action.DoAction(ActionModel);
             Reaction.DoReaction(rModel);
             return true;

@@ -44,7 +44,7 @@ namespace JTTT_1._0
             this.actionsBox = new System.Windows.Forms.ComboBox();
             this.reactionsBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TaskName = new System.Windows.Forms.TextBox();
             this.TaskList = new System.Windows.Forms.ListBox();
             this.Execute = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
@@ -173,26 +173,26 @@ namespace JTTT_1._0
             this.label9.TabIndex = 14;
             this.label9.Text = "Nazwa tasku";
             // 
-            // textBox1
+            // TaskName
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 296);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 15;
+            this.TaskName.Location = new System.Drawing.Point(78, 296);
+            this.TaskName.Name = "TaskName";
+            this.TaskName.Size = new System.Drawing.Size(149, 20);
+            this.TaskName.TabIndex = 15;
             // 
             // TaskList
             // 
             this.TaskList.FormattingEnabled = true;
             this.TaskList.Location = new System.Drawing.Point(349, 9);
             this.TaskList.Name = "TaskList";
-            this.TaskList.Size = new System.Drawing.Size(327, 147);
+            this.TaskList.Size = new System.Drawing.Size(486, 147);
             this.TaskList.TabIndex = 16;
             // 
             // Execute
             // 
             this.Execute.Location = new System.Drawing.Point(349, 162);
             this.Execute.Name = "Execute";
-            this.Execute.Size = new System.Drawing.Size(101, 43);
+            this.Execute.Size = new System.Drawing.Size(113, 43);
             this.Execute.TabIndex = 17;
             this.Execute.Text = "Wykonaj";
             this.Execute.UseVisualStyleBackColor = true;
@@ -200,9 +200,9 @@ namespace JTTT_1._0
             // 
             // Clear
             // 
-            this.Clear.Location = new System.Drawing.Point(466, 162);
+            this.Clear.Location = new System.Drawing.Point(484, 162);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(101, 43);
+            this.Clear.Size = new System.Drawing.Size(111, 43);
             this.Clear.TabIndex = 18;
             this.Clear.Text = "Czyść";
             this.Clear.UseVisualStyleBackColor = true;
@@ -210,9 +210,9 @@ namespace JTTT_1._0
             // 
             // Serialize
             // 
-            this.Serialize.Location = new System.Drawing.Point(575, 162);
+            this.Serialize.Location = new System.Drawing.Point(616, 162);
             this.Serialize.Name = "Serialize";
-            this.Serialize.Size = new System.Drawing.Size(101, 22);
+            this.Serialize.Size = new System.Drawing.Size(101, 43);
             this.Serialize.TabIndex = 19;
             this.Serialize.Text = "Serialize";
             this.Serialize.UseVisualStyleBackColor = true;
@@ -220,9 +220,9 @@ namespace JTTT_1._0
             // 
             // DeSerialize
             // 
-            this.DeSerialize.Location = new System.Drawing.Point(575, 184);
+            this.DeSerialize.Location = new System.Drawing.Point(734, 162);
             this.DeSerialize.Name = "DeSerialize";
-            this.DeSerialize.Size = new System.Drawing.Size(101, 22);
+            this.DeSerialize.Size = new System.Drawing.Size(101, 43);
             this.DeSerialize.TabIndex = 20;
             this.DeSerialize.Text = "Deserialize";
             this.DeSerialize.UseVisualStyleBackColor = true;
@@ -232,13 +232,13 @@ namespace JTTT_1._0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 371);
+            this.ClientSize = new System.Drawing.Size(847, 371);
             this.Controls.Add(this.DeSerialize);
             this.Controls.Add(this.Serialize);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Execute);
             this.Controls.Add(this.TaskList);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TaskName);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.reactionsBox);
             this.Controls.Add(this.actionsBox);
@@ -276,7 +276,7 @@ namespace JTTT_1._0
         private System.Windows.Forms.ComboBox actionsBox;
         private System.Windows.Forms.ComboBox reactionsBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TaskName;
         private System.Windows.Forms.ListBox TaskList;
         private System.Windows.Forms.Button Execute;
         private System.Windows.Forms.Button Clear;

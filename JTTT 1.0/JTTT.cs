@@ -28,7 +28,7 @@ namespace JTTT_1._0
             var reactionModel = reaction.GetEmptyModel() as MDowdnloadImgSendEmai;
             reactionModel.EmailReceiverAddress = EmailAdress.Text;
             reactionModel.URL = URL.Text;
-            Task task = new Task(action, reaction, actionModel, reactionModel);
+            Task task = new Task(action, reaction, actionModel, reactionModel,TaskName.Text);
             Services.Instance.Tasks.AddTask(task);
         }
 

@@ -4,22 +4,9 @@ namespace JTTT_1._0
 {
     class Services
     {
-        //class ActionReactionPair
-        //{
-        //    public IReaction Reaction { get; set; }
-        //    public List<IAction> Action { get;set; }
-        //}
-        //private ActionReactionPair _actions = new ActionReactionPair();
+    
+        public static Services Instance => _instance ?? (_instance = new Services());
 
-        //public void AddActionReaction(IReaction r,ref List<IAction> a)
-        //{
-        //    _actions = new ActionReactionPair {Reaction = r,Action = a};
-        //}
-        public static Services Instance
-        {
-            get { return _instance ?? (_instance = new Services()); }
-        }
-        
         private static Services _instance;
         public HtmlService Htmlservice;
         public LoggerService Logger;
