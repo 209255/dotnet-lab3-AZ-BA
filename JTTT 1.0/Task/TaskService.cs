@@ -8,12 +8,12 @@ namespace JTTT_1._0
 {
     class TaskService
     {
-        private string _serialize;
+        private readonly string _serialize;
 
         public TaskService()
         {
             Tasks = new BindingList<Task>();
-            _serialize = null;
+            _serialize = "serialize.txt";
         }
 
         public BindingList<Task> Tasks { get; }
@@ -41,10 +41,9 @@ namespace JTTT_1._0
             if (!Tasks.GetType().IsSerializable) return;
             try
             {
-                using (var stream = new MemoryStream())
+                using (var stream = new FileStream(_serialize,FileMode.Create))
                 {
                     new BinaryFormatter().Serialize(stream, Tasks);
-                    _serialize = Convert.ToBase64String(stream.ToArray());
                 }
             }
             catch (SerializationException e)
@@ -59,9 +58,9 @@ namespace JTTT_1._0
             Tasks.Clear();
             try
             {
-                var bytes = Convert.FromBase64String(_serialize);
+                if (!File.Exists(_serialize)) return;
                 BindingList<Task> temp;
-                using (var str = new MemoryStream(bytes))
+                using (var str = new FileStream(_serialize,FileMode.Open))
                 {
                     temp = (BindingList<Task>) new BinaryFormatter().Deserialize(str);
                 }

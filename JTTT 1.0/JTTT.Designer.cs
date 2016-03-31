@@ -151,7 +151,7 @@ namespace JTTT_1._0
             this.actionsBox.FormattingEnabled = true;
             this.actionsBox.Location = new System.Drawing.Point(78, 9);
             this.actionsBox.Name = "actionsBox";
-            this.actionsBox.Size = new System.Drawing.Size(147, 21);
+            this.actionsBox.Size = new System.Drawing.Size(209, 21);
             this.actionsBox.TabIndex = 12;
             this.actionsBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -160,7 +160,7 @@ namespace JTTT_1._0
             this.reactionsBox.FormattingEnabled = true;
             this.reactionsBox.Location = new System.Drawing.Point(78, 184);
             this.reactionsBox.Name = "reactionsBox";
-            this.reactionsBox.Size = new System.Drawing.Size(147, 21);
+            this.reactionsBox.Size = new System.Drawing.Size(209, 21);
             this.reactionsBox.TabIndex = 13;
             this.reactionsBox.SelectedIndexChanged += new System.EventHandler(this.reactionsBox_SelectedIndexChanged);
             // 
