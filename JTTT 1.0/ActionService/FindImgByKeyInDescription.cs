@@ -5,8 +5,9 @@ namespace JTTT_1._0
     [Serializable]
     class FindImgByKeyInDescription : IAction
     {
+        public int? Id { get; set; }
+        public string ActionName { get; set; } = "Find image with key word in description";
 
-        private const string ActionName = "Find image with key word in description";
         public string DoAction(Model model)
         {
 

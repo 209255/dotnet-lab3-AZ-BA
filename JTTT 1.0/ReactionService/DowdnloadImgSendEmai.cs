@@ -6,7 +6,8 @@ namespace JTTT_1._0
     [Serializable]
     class DowdnloadImgSendEmai : IReaction
     {
-        private const string ReactionName = "Send Email with Attachment";
+     
+        public string ReactionName { get; set; } = "Send Email with Attachment";
         public string GetReactionName()
         {
             return ReactionName;

@@ -1,6 +1,7 @@
 ﻿namespace JTTT_1._0
 {
-    interface Model
+    public abstract class Model
     {
+        public int? Id { get; set; }
     }
 }
