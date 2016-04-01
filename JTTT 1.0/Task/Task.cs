@@ -3,7 +3,7 @@
 namespace JTTT_1._0
 {
     [Serializable]
-    class Task
+    public class Task
     {
         public int? ActionId { get; set; } 
         public virtual IAction Action { get; set; }

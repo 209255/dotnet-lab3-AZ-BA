@@ -76,6 +76,7 @@
     <Compile Include="EmailService\SMTPConfig\gmailConfig.cs" />
     <Compile Include="EmailService\SMTPService.cs" />
     <Compile Include="ReactionService\MDowdnloadImgSendEmai.cs" />
+    <Compile Include="Database1\TaskServiceDbContext.cs" />
     <Compile Include="Tools\FileDownloader.cs" />
     <Compile Include="Tools\FileWritter.cs" />
     <Compile Include="HtmlService\HtmlService.cs" />

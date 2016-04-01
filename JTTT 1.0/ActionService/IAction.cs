@@ -4,7 +4,7 @@ using System;
 namespace JTTT_1._0
 {
     
-    interface IAction
+    public interface IAction
     {
         string GetActionName();
         string DoAction(Model model);
