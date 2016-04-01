@@ -13,7 +13,7 @@ namespace JTTT_1._0
             return ReactionName;
         }
 
-        public void DoReaction(Model model)
+        public void DoReaction(IModel model)
         {
             var myModel = model as MDowdnloadImgSendEmai;
             const string myEmailAddres = "zpompka666@gmail.com";
@@ -33,7 +33,7 @@ namespace JTTT_1._0
             Services.Instance.ReactionRegister.RegisterReaction(this);
         }
 
-        public Model GetEmptyModel()
+        public IModel GetEmptyModel()
         {
             return new MDowdnloadImgSendEmai();
         }

@@ -10,12 +10,12 @@ namespace JTTT_1._0
         public int? ReactionId { get; set; }
         public virtual IReaction Reaction { get;  set; }
         public int? ActionModelId { get; set; }
-        public virtual Model ActionModel { get;  set; }
+        public virtual IModel ActionModel { get;  set; }
         public int? ReactionModelId { get; set; }
-        public virtual Model ReactionModel { get; set; }
+        public virtual IModel ReactionModel { get; set; }
         public string Name { get;  set; }
         
-        public Task(IAction action, IReaction reaction, Model actionModel, Model reactionModel,string name)
+        public Task(IAction action, IReaction reaction, IModel actionModel, IModel reactionModel,string name)
         {
             Action = action;
             Reaction = reaction;

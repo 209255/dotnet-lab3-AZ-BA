@@ -8,7 +8,7 @@ namespace JTTT_1._0
         public int? Id { get; set; }
         public string ActionName { get; set; } = "Find image with key word in description";
 
-        public string DoAction(Model model)
+        public string DoAction(IModel model)
         {
 
             var myModel = model as MFindImgByKeyInDescription;
@@ -34,7 +34,7 @@ namespace JTTT_1._0
             Services.Instance.ActionRegister.RegisterAction(this);
         }
 
-        public Model GetEmptyModel()
+        public IModel GetEmptyModel()
         {
             return new MFindImgByKeyInDescription();
         }

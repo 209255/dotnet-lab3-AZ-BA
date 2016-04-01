@@ -10,5 +10,7 @@ namespace JTTT_1._0.Database
         }
         public DbSet<Task> Tasks { get; set; }
         public DbSet<IReaction> Reaction { get; set; }
+        public DbSet<IAction> Action { get; set; }
+    
     }
 }
