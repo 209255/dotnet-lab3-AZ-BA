@@ -9,8 +9,7 @@ namespace JTTT_1._0.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "JTTT_1._0.Database.TaskServiceDbContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(JTTT_1._0.Database.TaskServiceDbContext context)

@@ -75,18 +75,6 @@
     <Compile Include="EmailService\Messages\SingleMsgWithAttachment.cs" />
     <Compile Include="EmailService\SMTPConfig\gmailConfig.cs" />
     <Compile Include="EmailService\SMTPService.cs" />
-    <Compile Include="Migrations\201604061759327_InitialCreate.cs" />
-    <Compile Include="Migrations\201604061759327_InitialCreate.Designer.cs">
-      <DependentUpon>201604061759327_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604070924127_mig.cs" />
-    <Compile Include="Migrations\201604070924127_mig.Designer.cs">
-      <DependentUpon>201604070924127_mig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604070935481_mig1.cs" />
-    <Compile Include="Migrations\201604070935481_mig1.Designer.cs">
-      <DependentUpon>201604070935481_mig1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ReactionService\MDowdnloadImgSendEmai.cs" />
     <Compile Include="Database1\TaskServiceDbContext.cs" />
@@ -112,15 +100,6 @@
     <EmbeddedResource Include="JTTT.resx">
       <DependentUpon>JTTT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604061759327_InitialCreate.resx">
-      <DependentUpon>201604061759327_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604070924127_mig.resx">
-      <DependentUpon>201604070924127_mig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604070935481_mig1.resx">
-      <DependentUpon>201604070935481_mig1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -130,7 +109,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,7 +123,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AppData\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
