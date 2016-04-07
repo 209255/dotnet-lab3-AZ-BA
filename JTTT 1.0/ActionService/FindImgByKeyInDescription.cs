@@ -5,10 +5,10 @@ namespace JTTT_1._0
     [Serializable]
     class FindImgByKeyInDescription : IAction
     {
-        public int? Id { get; set; }
+
         public string ActionName { get; set; } = "Find image with key word in description";
 
-        public string DoAction(IModel model)
+        public override string DoAction(IModel model)
         {
 
             var myModel = model as MFindImgByKeyInDescription;
@@ -24,7 +24,7 @@ namespace JTTT_1._0
             return imgUrl;
         }
 
-        public string GetActionName()
+        public override string GetActionName()
         {
             return ActionName;
         }
@@ -34,7 +34,7 @@ namespace JTTT_1._0
             Services.Instance.ActionRegister.RegisterAction(this);
         }
 
-        public IModel GetEmptyModel()
+        public override IModel GetEmptyModel()
         {
             return new MFindImgByKeyInDescription();
         }

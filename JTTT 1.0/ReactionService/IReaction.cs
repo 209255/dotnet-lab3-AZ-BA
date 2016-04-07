@@ -1,10 +1,12 @@
 ﻿namespace JTTT_1._0
 {
 
-   public interface IReaction
+   public abstract class IReaction
     {
-        string GetReactionName();
-        void DoReaction(IModel model);
-        IModel GetEmptyModel();
+        public int Id { get; set; }
+       // public virtual Task Task { get; set; }
+        public abstract string GetReactionName();
+        public abstract  void DoReaction(IModel model);
+        public abstract IModel GetEmptyModel();
     }
 }

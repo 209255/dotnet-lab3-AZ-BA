@@ -24,6 +24,7 @@ namespace JTTT_1._0
             using (var ctx = Services.Instance.TaskServiceDbContext)
             {
                 ctx.Tasks.Add(t);
+                ctx.SaveChanges();
             }
         }
 
@@ -32,6 +33,7 @@ namespace JTTT_1._0
             using (var ctx = Services.Instance.TaskServiceDbContext)
             {
                 ctx.Tasks.Remove(t);
+                ctx.SaveChanges();
             }
         }
 
@@ -40,6 +42,7 @@ namespace JTTT_1._0
             using (var ctx = Services.Instance.TaskServiceDbContext)
             {
                 ctx.Tasks.RemoveRange(ctx.Tasks);
+                ctx.SaveChanges();
             }
         }
 
@@ -50,7 +53,7 @@ namespace JTTT_1._0
                 foreach (var t in ctx.Tasks)
                 {
                     t.Execute();
-                    ClearTaskFromDb(t);
+                   // ClearTaskFromDb(t);
                 }
             }
         }
@@ -96,7 +99,6 @@ namespace JTTT_1._0
             catch (SerializationException e)
             {
                 Console.WriteLine(@"Failed to serialization: " + e.Message);
-                throw;
             }
         }
 
@@ -119,7 +121,6 @@ namespace JTTT_1._0
             catch (SerializationException e)
             {
                 Console.WriteLine(@"failed to deserializaton: " + e.Message);
-                throw;
             }
         }
     }

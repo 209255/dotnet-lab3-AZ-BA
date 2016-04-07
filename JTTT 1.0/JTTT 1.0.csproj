@@ -69,6 +69,7 @@
     <Compile Include="ActionService\IAction.cs" />
     <Compile Include="ActionService\MFindImgByKeyInDescription.cs" />
     <Compile Include="ActionService\IModel.cs" />
+    <Compile Include="Database1\TaskDbInitializer.cs" />
     <Compile Include="EmailService\Messages\EmailMsg.cs" />
     <Compile Include="EmailService\IEmailService.cs" />
     <Compile Include="EmailService\Messages\SimpleMsg.cs" />
@@ -108,6 +109,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,9 +120,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

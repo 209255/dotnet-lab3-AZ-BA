@@ -12,15 +12,9 @@ namespace JTTT_1._0
             _reg.Add(action.GetActionName(), action);
         }
 
-        public IAction GetAction(string actionName)
-        {
-            return _reg[actionName];
-        }
+        public IAction GetAction(string actionName) => _reg[actionName];
 
-        public List<string> GetActionNames()
-        {
-            return _reg.Select(action => action.Key).ToList();
-        }
+        public List<string> GetActionNames() => _reg.Select(action => action.Key).ToList();
 
         public ActionRegister()
         {

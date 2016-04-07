@@ -6,14 +6,14 @@ namespace JTTT_1._0
     [Serializable]
     class DowdnloadImgSendEmai : IReaction
     {
-     
+        
         public string ReactionName { get; set; } = "Send Email with Attachment";
-        public string GetReactionName()
+        public override string GetReactionName()
         {
             return ReactionName;
         }
 
-        public void DoReaction(IModel model)
+        public override void DoReaction(IModel model)
         {
             var myModel = model as MDowdnloadImgSendEmai;
             const string myEmailAddres = "zpompka666@gmail.com";
@@ -33,7 +33,7 @@ namespace JTTT_1._0
             Services.Instance.ReactionRegister.RegisterReaction(this);
         }
 
-        public IModel GetEmptyModel()
+        public override IModel GetEmptyModel()
         {
             return new MDowdnloadImgSendEmai();
         }

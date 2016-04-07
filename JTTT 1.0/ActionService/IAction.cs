@@ -3,11 +3,15 @@ using System;
 
 namespace JTTT_1._0
 {
-    
-    public interface IAction
+
+    public abstract class IAction
     {
-        string GetActionName();
-        string DoAction(IModel model);
-        IModel GetEmptyModel();
+        public int Id { get; set; }
+      //  public virtual Task Task { get; set; }
+        public abstract string GetActionName();
+        public abstract string DoAction(IModel model);
+        public abstract IModel GetEmptyModel();
     }
 }
+
+   
