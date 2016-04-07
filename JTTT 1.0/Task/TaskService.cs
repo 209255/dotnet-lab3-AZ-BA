@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using JTTT_1._0.Database;
@@ -32,7 +33,8 @@ namespace JTTT_1._0
         {
             using (var ctx = Services.Instance.TaskServiceDbContext)
             {
-                ctx.Tasks.Remove(t);
+                var taskToRm = ctx.Tasks.First(x => x.Id == t.Id);
+                ctx.Tasks.Remove(taskToRm);
                 ctx.SaveChanges();
             }
         }
@@ -64,7 +66,8 @@ namespace JTTT_1._0
             {
                 foreach (var task in ctx.Tasks)
                 {
-                    Tasks.Add(task);
+                    var t = new Task(task.Action,task.Reaction,task.ActionModel,task.ReactionModel,task.Name);
+                    Tasks.Add(t);
                 }
             }
         }

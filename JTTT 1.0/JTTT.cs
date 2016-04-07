@@ -8,10 +8,11 @@ namespace JTTT_1._0
         public JTTT()
         {
             InitializeComponent();
+            //Services.Instance.Tasks.LoadTasks();
             TaskList.DataSource = Services.Instance.Tasks.Tasks;
             actionsBox.Items.AddRange(Services.Instance.ActionRegister.GetActionNames().ToArray());
             reactionsBox.Items.AddRange(Services.Instance.ReactionRegister.GetReactionNames().ToArray());
-            //Services.Instance.Tasks.LoadTasks();
+           
         }
 
 
@@ -33,11 +34,8 @@ namespace JTTT_1._0
             reactionModel.EmailReceiverAddress = EmailAdress.Text;
             reactionModel.URL = URL.Text;
             Task task = new Task(action, reaction, actionModel, reactionModel,TaskName.Text);
-            Services.Instance.Tasks.AddTask(task);
             Services.Instance.Tasks.AddTaskToDb(task);
-            
-            
-        }
+       }
 
         private void Clear_Click(object sender, EventArgs e)
         {

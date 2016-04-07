@@ -5,14 +5,14 @@ namespace JTTT_1._0.Database
 {
     public class TaskServiceDbContext:DbContext
     {
-        public TaskServiceDbContext() : base("Tasks1")
+        public TaskServiceDbContext() : base("Tasks")
         {
             System.Data.Entity.Database.SetInitializer<TaskServiceDbContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-          modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        //  modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             //modelBuilder.Entity<Task>()
             //    .HasRequired<IReaction>(u => u.Reaction)
             //    .WithRequiredDependent(c => c.Task).Map(p => p.MapKey("ReactionId"));

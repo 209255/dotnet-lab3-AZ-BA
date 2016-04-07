@@ -69,13 +69,25 @@
     <Compile Include="ActionService\IAction.cs" />
     <Compile Include="ActionService\MFindImgByKeyInDescription.cs" />
     <Compile Include="ActionService\IModel.cs" />
-    <Compile Include="Database1\TaskDbInitializer.cs" />
     <Compile Include="EmailService\Messages\EmailMsg.cs" />
     <Compile Include="EmailService\IEmailService.cs" />
     <Compile Include="EmailService\Messages\SimpleMsg.cs" />
     <Compile Include="EmailService\Messages\SingleMsgWithAttachment.cs" />
     <Compile Include="EmailService\SMTPConfig\gmailConfig.cs" />
     <Compile Include="EmailService\SMTPService.cs" />
+    <Compile Include="Migrations\201604061759327_InitialCreate.cs" />
+    <Compile Include="Migrations\201604061759327_InitialCreate.Designer.cs">
+      <DependentUpon>201604061759327_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604070924127_mig.cs" />
+    <Compile Include="Migrations\201604070924127_mig.Designer.cs">
+      <DependentUpon>201604070924127_mig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604070935481_mig1.cs" />
+    <Compile Include="Migrations\201604070935481_mig1.Designer.cs">
+      <DependentUpon>201604070935481_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ReactionService\MDowdnloadImgSendEmai.cs" />
     <Compile Include="Database1\TaskServiceDbContext.cs" />
     <Compile Include="Tools\FileDownloader.cs" />
@@ -99,6 +111,15 @@
     <Compile Include="Task\TaskService.cs" />
     <EmbeddedResource Include="JTTT.resx">
       <DependentUpon>JTTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604061759327_InitialCreate.resx">
+      <DependentUpon>201604061759327_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604070924127_mig.resx">
+      <DependentUpon>201604070924127_mig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604070935481_mig1.resx">
+      <DependentUpon>201604070935481_mig1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
