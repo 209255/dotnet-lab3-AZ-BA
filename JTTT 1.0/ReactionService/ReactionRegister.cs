@@ -9,6 +9,7 @@ namespace JTTT_1._0
 
         public void RegisterReaction(IReaction reaction)
         {
+            if (_reg.ContainsKey(reaction.GetReactionName())) return;
             _reg.Add(reaction.GetReactionName(), reaction);
         }
 

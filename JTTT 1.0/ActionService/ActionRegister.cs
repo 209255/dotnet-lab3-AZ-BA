@@ -8,7 +8,9 @@ namespace JTTT_1._0
         readonly Dictionary<string, IAction> _reg;
 
         public void RegisterAction(IAction action)
+     
         {
+            if (_reg.ContainsKey(action.GetActionName())) return;
             _reg.Add(action.GetActionName(), action);
         }
 

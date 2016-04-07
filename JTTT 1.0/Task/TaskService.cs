@@ -22,7 +22,7 @@ namespace JTTT_1._0
 
         public void AddTaskToDb(Task t)
         {
-            using (var ctx = Services.Instance.TaskServiceDbContext)
+            using (var ctx = new TaskServiceDbContext())
             {
                 ctx.Tasks.Add(t);
                 ctx.SaveChanges();
@@ -31,7 +31,7 @@ namespace JTTT_1._0
 
         public void ClearTaskFromDb(Task t)
         {
-            using (var ctx = Services.Instance.TaskServiceDbContext)
+            using (var ctx = new TaskServiceDbContext())
             {
                 var taskToRm = ctx.Tasks.First(x => x.Id == t.Id);
                 ctx.Tasks.Remove(taskToRm);
@@ -41,7 +41,7 @@ namespace JTTT_1._0
 
         public void ClearAllTaskFromDb()
         {
-            using (var ctx = Services.Instance.TaskServiceDbContext)
+            using (var ctx = new TaskServiceDbContext())
             {
                 ctx.Tasks.RemoveRange(ctx.Tasks);
                 ctx.SaveChanges();
@@ -50,7 +50,7 @@ namespace JTTT_1._0
 
         public void ExecuteAllTasks()
         {
-            using (var ctx = Services.Instance.TaskServiceDbContext)
+            using (var ctx = new TaskServiceDbContext())
             {
                 foreach (var t in ctx.Tasks)
                 {
@@ -62,7 +62,7 @@ namespace JTTT_1._0
 
         public void LoadTasks()
         {
-            using (var ctx = Services.Instance.TaskServiceDbContext)
+            using (var ctx = new TaskServiceDbContext())
             {
                 foreach (var task in ctx.Tasks)
                 {
