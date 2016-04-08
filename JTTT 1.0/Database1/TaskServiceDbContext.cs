@@ -7,7 +7,7 @@ namespace JTTT_1._0.Database
     {
         public TaskServiceDbContext() : base("Tasks")
         {
-            System.Data.Entity.Database.SetInitializer<TaskServiceDbContext>(null);
+            //System.Data.Entity.Database.SetInitializer<TaskServiceDbContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
