@@ -79,6 +79,7 @@
             this.picture.Size = new System.Drawing.Size(81, 87);
             this.picture.TabIndex = 4;
             this.picture.TabStop = false;
+            this.picture.Click += new System.EventHandler(this.picture_Click);
             // 
             // WeatherInfoForm
             // 

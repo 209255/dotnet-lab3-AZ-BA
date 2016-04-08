@@ -18,6 +18,11 @@ namespace JTTT_1._0
             return Parse(jsonWeather);
         }
 
+        public string GetWeatherImg(WeatherInfo.RootObject weather)
+        {
+            return FileDownloader.DownloadImg(iconBaseURL + weather.weather[0].icon + ".png");
+        }
+
         string DownloadWeatherInfo(string city)
         {
             var client = new WebClient();

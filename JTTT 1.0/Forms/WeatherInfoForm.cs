@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace JTTT_1._0
@@ -21,6 +22,8 @@ namespace JTTT_1._0
             try {
                 var weather = Services.Instance.WeatherService.GetCurrentWeather(cityTextBox.Text);
                 weatherDescription.Text = Parse(weather);
+                Image img = Image.FromFile(Services.Instance.WeatherService.GetWeatherImg(weather));
+                picture.Image = img;
             }
             catch
             {
@@ -31,7 +34,12 @@ namespace JTTT_1._0
 
         string Parse(WeatherInfo.RootObject weather)
         {
-            return $"Obecnie jest {weather.main.temp - 273.00f} stopni Celcjuszka, ciśnienie {weather.main.pressure}hPa. Wiatr pędzie z prędkością {weather.wind.speed}m/h";
+            return $"Obecnie jest {weather.main.temp - 273.00f} stopni Celcjuszka, ciśnienie {weather.main.pressure}hPa. Wiatr pędzi z prędkością {weather.wind.speed}m/h";
+        }
+
+        private void picture_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
