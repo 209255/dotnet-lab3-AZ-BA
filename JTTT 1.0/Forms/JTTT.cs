@@ -62,5 +62,16 @@ namespace JTTT_1._0
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            WeatherInfoForm form = new WeatherInfoForm();
+            form.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
