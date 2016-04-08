@@ -50,6 +50,10 @@
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -115,8 +119,13 @@
     <Compile Include="Forms\WeatherInfoForm.Designer.cs">
       <DependentUpon>WeatherInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WeatherService\WeatherInfo.cs" />
+    <Compile Include="WeatherService\WeatherService.cs" />
     <EmbeddedResource Include="Forms\JTTT.resx">
       <DependentUpon>JTTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WeatherInfoForm.resx">
+      <DependentUpon>WeatherInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604061759327_InitialCreate.resx">
       <DependentUpon>201604061759327_InitialCreate.cs</DependentUpon>

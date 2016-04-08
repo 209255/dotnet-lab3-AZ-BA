@@ -51,8 +51,6 @@ namespace JTTT_1._0
             this.Serialize = new System.Windows.Forms.Button();
             this.DeSerialize = new System.Windows.Forms.Button();
             this.CheckWeatherButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // URL
@@ -241,30 +239,11 @@ namespace JTTT_1._0
             this.CheckWeatherButton.UseVisualStyleBackColor = true;
             this.CheckWeatherButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(683, 299);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 20);
-            this.textBox1.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(639, 303);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Miasto";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // JTTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 371);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.CheckWeatherButton);
             this.Controls.Add(this.DeSerialize);
             this.Controls.Add(this.Serialize);
@@ -316,7 +295,5 @@ namespace JTTT_1._0
         private System.Windows.Forms.Button Serialize;
         private System.Windows.Forms.Button DeSerialize;
         private System.Windows.Forms.Button CheckWeatherButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
     }
 }

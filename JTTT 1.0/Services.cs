@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using JTTT_1._0.Database;
+﻿using JTTT_1._0.Database;
 
 namespace JTTT_1._0
 {
@@ -15,6 +14,7 @@ namespace JTTT_1._0
         public ActionRegister ActionRegister;
         public ReactionRegister ReactionRegister;
         public TaskServiceDbContext TaskServiceDbContext;
+        public WeatherService WeatherService;
 
         private Services()
         {
@@ -24,6 +24,7 @@ namespace JTTT_1._0
             ReactionRegister = new ReactionRegister();
             Tasks = new TaskService();
             TaskServiceDbContext = new TaskServiceDbContext();
+            WeatherService = new WeatherService();
 
         }               
     }
