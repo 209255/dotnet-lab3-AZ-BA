@@ -13,14 +13,9 @@ namespace JTTT_1._0
 
             var myModel = model as MFindImgByKeyInDescription;
             Services.Instance.Logger.AddAction(ActionName + "\t" + myModel.URL + "\t" + myModel.KeyWord);
-
             var htmlService = Services.Instance.Htmlservice;
-
             string imgUrl = htmlService.GetPctUrl(myModel.URL.Contains("http://") ? myModel.URL : "http://" + myModel.URL,
                                       myModel.KeyWord);
-            //FileDownloader.DownloadImg(path);
-   
-            //string fileAtt = "obrazek.jpg";
             return imgUrl;
         }
 

@@ -25,6 +25,7 @@ namespace JTTT_1._0
             using (var ctx = new TaskServiceDbContext())
             {
                 ctx.Tasks.Add(t);
+                AddTask(t);
                 ctx.SaveChanges();
             }
         }
@@ -33,6 +34,7 @@ namespace JTTT_1._0
         {
             using (var ctx = new TaskServiceDbContext())
             {
+                if (!ctx.Tasks.Any()) return;
                 var taskToRm = ctx.Tasks.First(x => x.Id == t.Id);
                 ctx.Tasks.Remove(taskToRm);
                 ctx.SaveChanges();
@@ -43,20 +45,10 @@ namespace JTTT_1._0
         {
             using (var ctx = new TaskServiceDbContext())
             {
+                if (!ctx.Tasks.Any()) return;
                 ctx.Tasks.RemoveRange(ctx.Tasks);
                 ctx.SaveChanges();
-            }
-        }
-
-        public void ExecuteAllTasks()
-        {
-            using (var ctx = new TaskServiceDbContext())
-            {
-                foreach (var t in ctx.Tasks)
-                {
-                    t.Execute();
-                   // ClearTaskFromDb(t);
-                }
+                ClearAll();
             }
         }
 
@@ -64,14 +56,14 @@ namespace JTTT_1._0
         {
             using (var ctx = new TaskServiceDbContext())
             {
+                if (!ctx.Tasks.Any()) return;
                 foreach (var task in ctx.Tasks)
                 {
-                    var t = new Task(task.Action,task.Reaction,task.ActionModel,task.ReactionModel,task.Name);
-                    Tasks.Add(t);
+                   AddTask(new Task(task.Action, task.Reaction, task.ActionModel, task.ReactionModel, task.Name));
                 }
             }
         }
-        public void AddTask(Task t)
+        private void AddTask(Task t)
         {
             Tasks.Add(t);
         }
@@ -82,9 +74,10 @@ namespace JTTT_1._0
             {
                 t.Execute();
             }
+            ClearAllTaskFromDb();
         }
 
-        public void ClearAll()
+        private void ClearAll()
         {
             Tasks.Clear();
         }
