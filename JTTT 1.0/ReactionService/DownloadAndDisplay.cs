@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JTTT_1._0
 {
@@ -18,12 +14,25 @@ namespace JTTT_1._0
         public override void DoReaction(IModel model)
         {
             var myModel = model as MDowdnloadImgSendEmai;
+            string imgPath = FileDownloader.DownloadImg(myModel.ImgURL);
+
+            string description = myModel.Description;
+
+            DisplayForm form = new DisplayForm();
+            form.SetDescription(myModel.Description);
+            form.SetImg(imgPath);
+            form.Show();
 
         }
 
         public override IModel GetEmptyModel()
         {
             return new MDowdnloadImgSendEmai();
+        }
+
+        public DownloadAndDisplay()
+        {
+            Services.Instance.ReactionRegister.RegisterReaction(this);
         }
     }
 }

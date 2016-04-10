@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace JTTT_1._0
@@ -12,7 +13,6 @@ namespace JTTT_1._0
             TaskList.DataSource = Services.Instance.Tasks.Tasks;
             actionsBox.Items.AddRange(Services.Instance.ActionRegister.GetActionNames().ToArray());
             reactionsBox.Items.AddRange(Services.Instance.ReactionRegister.GetReactionNames().ToArray());
-            
         }
 
 
@@ -25,14 +25,14 @@ namespace JTTT_1._0
         {
             var action = Services.Instance.ActionRegister.GetAction(actionsBox.Text);
             var reaction = Services.Instance.ReactionRegister.GetReaction(reactionsBox.Text);
-            var actionModel = action.GetEmptyModel() as MFindImgByKeyInDescription;
+            var actionModel = action.GetEmptyModel();
             if (actionModel == null) return;
             actionModel.FillModel(new string[] { URL.Text, KeyWord.Text });
-            var reactionModel = reaction.GetEmptyModel() as MDowdnloadImgSendEmai;
+            var reactionModel = reaction.GetEmptyModel();
             if (reactionModel == null) return;
             reactionModel.FillModel(new string[] { URL.Text, EmailAdress.Text });
             Services.Instance.Tasks.AddTaskToDb(new Task(action, reaction, actionModel, reactionModel, TaskName.Text));
-       }
+        }
 
         private void Clear_Click(object sender, EventArgs e)
         {
@@ -91,6 +91,21 @@ namespace JTTT_1._0
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+        IModel GetActionModel(IAction action)
+        {
+            if (tabAction.SelectedTab == AcImgOnWeb)
+            {
+                var model = action.GetEmptyModel();
+                model.FillModel(new string[] { URL.Text, KeyWord.Text });
+                return model;
+            }
+            throw new Exception();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

@@ -73,6 +73,12 @@
     <Compile Include="ActionService\IAction.cs" />
     <Compile Include="ActionService\MFindImgByKeyInDescription.cs" />
     <Compile Include="ActionService\IModel.cs" />
+    <Compile Include="Forms\DisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DisplayForm.Designer.cs">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmailService\Messages\EmailMsg.cs" />
     <Compile Include="EmailService\IEmailService.cs" />
     <Compile Include="EmailService\Messages\SimpleMsg.cs" />
@@ -127,6 +133,9 @@
     </Compile>
     <Compile Include="WeatherService\WeatherInfo.cs" />
     <Compile Include="WeatherService\WeatherService.cs" />
+    <EmbeddedResource Include="Forms\DisplayForm.resx">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\JTTT.resx">
       <DependentUpon>JTTT.cs</DependentUpon>
     </EmbeddedResource>

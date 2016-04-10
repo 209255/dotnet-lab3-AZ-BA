@@ -30,6 +30,8 @@ namespace JTTT_1._0
                     let alt = node.GetAttributeValue("alt", "") 
                     let src = node.GetAttributeValue("src", "")
                     where alt.ToLower().Contains(keyWord.ToLower()) select node).FirstOrDefault();
+            if (myNode == null)
+                return null;
             return new string[] { myNode.GetAttributeValue("src", ""), myNode.GetAttributeValue("alt", "") };
         }
 
