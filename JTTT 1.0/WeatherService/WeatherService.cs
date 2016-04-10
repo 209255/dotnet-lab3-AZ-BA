@@ -23,6 +23,11 @@ namespace JTTT_1._0
             return FileDownloader.DownloadImg(iconBaseURL + weather.weather[0].icon + ".png");
         }
 
+        public string GetWeatherImgURL(WeatherInfo.RootObject weather)
+        {
+            return iconBaseURL + weather.weather[0].icon + ".png";
+        }
+
         string DownloadWeatherInfo(string city)
         {
             var client = new WebClient();
@@ -44,6 +49,7 @@ namespace JTTT_1._0
             }
             return weather;
         }
+
 
     }
 }

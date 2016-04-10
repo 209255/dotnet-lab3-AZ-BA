@@ -32,9 +32,9 @@ namespace JTTT_1._0
             
         }
 
-        string Parse(WeatherInfo.RootObject weather)
+        public string Parse(WeatherInfo.RootObject weather)
         {
-            return $"Obecnie jest {weather.main.temp - 273.00f} stopni Celcjuszka, ciśnienie {weather.main.pressure}hPa. Wiatr pędzi z prędkością {weather.wind.speed}m/h";
+            return $"Obecnie jest {weather.main.temp - 273.00f} stopni Celcjuszka, ciśnienie {weather.main.pressure}hPa. Wiatr pędzi z prędkością {weather.wind.speed}m/s";
         }
 
         private void picture_Click(object sender, EventArgs e)

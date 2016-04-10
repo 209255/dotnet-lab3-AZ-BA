@@ -36,8 +36,9 @@ namespace JTTT_1._0
         {
             var rModel = ReactionModel as MDowdnloadImgSendEmai;
             if (rModel == null) return false;
-            rModel.Complemet(Action.DoAction(ActionModel));
-            if (rModel.ImgURL == null) return false;
+            string[] data = Action.DoAction(ActionModel);
+            if (data == null) return false;
+            rModel.Complemet(data);
             Reaction.DoReaction(rModel);
             return true;
         }

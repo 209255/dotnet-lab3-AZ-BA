@@ -8,12 +8,15 @@ namespace JTTT_1._0
     {
        public static string DownloadImg(string src)
         {
-            const string filepath = "obrazek.jpg";
+            Random rand = new Random();
+            //const string filepath = "obrazek.jpg";
+            string path = "ob" + rand.Next().ToString() + "razek.jpg";
+
             using (var wc = new WebClient())
             {
                 try {
                     Console.WriteLine(src);
-                    wc.DownloadFile(src, filepath);
+                    wc.DownloadFile(src, path);
                     Console.WriteLine("download@@@@");
                 }
                 catch (Exception e)
@@ -22,7 +25,7 @@ namespace JTTT_1._0
                     Console.WriteLine("Cannot download image from " + src);
                 }
             }
-             return filepath;
+             return path;
         }
     }
 }
