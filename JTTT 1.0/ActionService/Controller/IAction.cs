@@ -11,6 +11,7 @@ namespace JTTT_1._0
         public abstract string GetActionName();
         public abstract string[] DoAction(IModel model);
         public abstract IModel GetEmptyModel();
+        public abstract ActionView GetView();
     }
 }
 

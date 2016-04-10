@@ -30,6 +30,11 @@ namespace JTTT_1._0
             return new MDowdnloadImgSendEmai();
         }
 
+        public override ReactionView GetView()
+        {
+            return new VDownloadAndDisplay();
+        }
+
         public DownloadAndDisplay()
         {
             Services.Instance.ReactionRegister.RegisterReaction(this);

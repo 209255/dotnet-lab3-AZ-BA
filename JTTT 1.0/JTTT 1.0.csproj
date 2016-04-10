@@ -69,12 +69,15 @@
   <ItemGroup>
     <Compile Include="ActionService\ActionRegister.cs" />
     <Compile Include="ActionService\ActionsProducer.cs" />
-    <Compile Include="ActionService\FindImgByKeyInDescription.cs" />
-    <Compile Include="ActionService\IAction.cs" />
-    <Compile Include="ActionService\MFindImgByKeyInDescription.cs" />
-    <Compile Include="ActionService\IModel.cs" />
-    <Compile Include="ActionService\MTempHigherThan.cs" />
-    <Compile Include="ActionService\TempHigherThan.cs" />
+    <Compile Include="ActionService\Controller\FindImgByKeyInDescription.cs" />
+    <Compile Include="ActionService\Controller\IAction.cs" />
+    <Compile Include="ActionService\Model\MFindImgByKeyInDescription.cs" />
+    <Compile Include="ActionService\Model\IModel.cs" />
+    <Compile Include="ActionService\Model\MTempHigherThan.cs" />
+    <Compile Include="ActionService\Controller\TempHigherThan.cs" />
+    <Compile Include="ActionService\View\VFindImgByKeyInDescription.cs" />
+    <Compile Include="ActionService\View\ActionView.cs" />
+    <Compile Include="ActionService\View\VTempHigherThan.cs" />
     <Compile Include="Forms\DisplayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,14 +111,17 @@
       <DependentUpon>201604101123017_mig3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="ReactionService\DownloadAndDisplay.cs" />
-    <Compile Include="ReactionService\MDowdnloadImgSendEmai.cs" />
+    <Compile Include="ReactionService\Controller\DownloadAndDisplay.cs" />
+    <Compile Include="ReactionService\Model\MDowdnloadImgSendEmai.cs" />
     <Compile Include="Database1\TaskServiceDbContext.cs" />
-    <Compile Include="ReactionService\MDownloadAndDisplay.cs" />
+    <Compile Include="ReactionService\Model\MDownloadAndDisplay.cs" />
+    <Compile Include="ReactionService\View\ReactionView.cs" />
+    <Compile Include="ReactionService\View\VDowdnloadImgSendEmai.cs" />
+    <Compile Include="ReactionService\View\VDownloadAndDisplay.cs" />
     <Compile Include="Tools\FileDownloader.cs" />
     <Compile Include="Tools\FileWritter.cs" />
     <Compile Include="HtmlService\HtmlService.cs" />
-    <Compile Include="ReactionService\IReaction.cs" />
+    <Compile Include="ReactionService\Controller\IReaction.cs" />
     <Compile Include="Forms\JTTT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +133,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReactionService\ReactionProducer.cs" />
     <Compile Include="ReactionService\ReactionRegister.cs" />
-    <Compile Include="ReactionService\DowdnloadImgSendEmai.cs" />
+    <Compile Include="ReactionService\Controller\DowdnloadImgSendEmai.cs" />
     <Compile Include="Services.cs" />
     <Compile Include="Task\Task.cs" />
     <Compile Include="Task\TaskService.cs" />

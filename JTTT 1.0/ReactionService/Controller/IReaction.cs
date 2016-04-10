@@ -8,5 +8,6 @@
         public abstract string GetReactionName();
         public abstract  void DoReaction(IModel model);
         public abstract IModel GetEmptyModel();
+        public abstract ReactionView GetView();
     }
 }

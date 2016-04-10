@@ -33,5 +33,10 @@ namespace JTTT_1._0
         {
             return new MFindImgByKeyInDescription();
         }
+
+        public override ActionView GetView()
+        {
+            return new VFindImgByKeyInDescription();
+        }
     }
 }

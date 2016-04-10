@@ -39,6 +39,11 @@ namespace JTTT_1._0
             return new MTempHigherThan();
         }
 
+        public override ActionView GetView()
+        {
+            return new VTempHigherThan();
+        }
+
         public TempHigherThan()
         {
             Services.Instance.ActionRegister.RegisterAction(this);
