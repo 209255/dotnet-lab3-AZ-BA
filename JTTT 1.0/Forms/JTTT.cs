@@ -12,7 +12,7 @@ namespace JTTT_1._0
             TaskList.DataSource = Services.Instance.Tasks.Tasks;
             actionsBox.Items.AddRange(Services.Instance.ActionRegister.GetActionNames().ToArray());
             reactionsBox.Items.AddRange(Services.Instance.ReactionRegister.GetReactionNames().ToArray());
-           
+            
         }
 
 
@@ -27,12 +27,10 @@ namespace JTTT_1._0
             var reaction = Services.Instance.ReactionRegister.GetReaction(reactionsBox.Text);
             var actionModel = action.GetEmptyModel() as MFindImgByKeyInDescription;
             if (actionModel == null) return;
-            actionModel.URL = URL.Text;
-            actionModel.KeyWord = KeyWord.Text;
+            actionModel.FillModel(new string[] { URL.Text, KeyWord.Text });
             var reactionModel = reaction.GetEmptyModel() as MDowdnloadImgSendEmai;
             if (reactionModel == null) return;
-            reactionModel.EmailReceiverAddress = EmailAdress.Text;
-            reactionModel.URL = URL.Text;
+            reactionModel.FillModel(new string[] { URL.Text, EmailAdress.Text });
             Services.Instance.Tasks.AddTaskToDb(new Task(action, reaction, actionModel, reactionModel, TaskName.Text));
        }
 
@@ -78,6 +76,21 @@ namespace JTTT_1._0
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }

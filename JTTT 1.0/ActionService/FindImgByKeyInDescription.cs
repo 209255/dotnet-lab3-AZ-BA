@@ -8,15 +8,15 @@ namespace JTTT_1._0
 
         public string ActionName { get; set; } = "Find image with key word in description";
 
-        public override string DoAction(IModel model)
+        public override string[] DoAction(IModel model)
         {
 
             var myModel = model as MFindImgByKeyInDescription;
             Services.Instance.Logger.AddAction(ActionName + "\t" + myModel.URL + "\t" + myModel.KeyWord);
             var htmlService = Services.Instance.Htmlservice;
-            string imgUrl = htmlService.GetPctUrl(myModel.URL.Contains("http://") ? myModel.URL : "http://" + myModel.URL,
+            string[] imgUrlWithDesc = htmlService.GetPctUrlWithDescription(myModel.URL.Contains("http://") ? myModel.URL : "http://" + myModel.URL,
                                       myModel.KeyWord);
-            return imgUrl;
+            return imgUrlWithDesc;
         }
 
         public override string GetActionName()

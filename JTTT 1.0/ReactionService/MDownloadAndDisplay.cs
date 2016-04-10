@@ -3,9 +3,8 @@
 namespace JTTT_1._0
 {
     [Serializable]
-    class MDowdnloadImgSendEmai : IModel
+    class MDownloadAndDisplay : IModel
     {
-       
         public string EmailReceiverAddress { get; set; }
         public string ImgURL { get; set; }
         public string Description { get; set; }
@@ -21,5 +20,6 @@ namespace JTTT_1._0
             ImgURL = args[0];
             Description = args[1];
         }
+
     }
 }

@@ -30,6 +30,7 @@ namespace JTTT_1._0
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.URL = new System.Windows.Forms.TextBox();
             this.actionsLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,16 +52,26 @@ namespace JTTT_1._0
             this.Serialize = new System.Windows.Forms.Button();
             this.DeSerialize = new System.Windows.Forms.Button();
             this.CheckWeatherButton = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabAction = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabReaction = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tempTrigger = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.city = new System.Windows.Forms.TextBox();
+            this.tabAction.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabReaction.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // URL
@@ -249,15 +260,15 @@ namespace JTTT_1._0
             this.CheckWeatherButton.UseVisualStyleBackColor = true;
             this.CheckWeatherButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tabControl1
+            // tabAction
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-1, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(344, 154);
-            this.tabControl1.TabIndex = 22;
+            this.tabAction.Controls.Add(this.tabPage1);
+            this.tabAction.Controls.Add(this.tabPage2);
+            this.tabAction.Location = new System.Drawing.Point(-1, 2);
+            this.tabAction.Name = "tabAction";
+            this.tabAction.SelectedIndex = 0;
+            this.tabAction.Size = new System.Drawing.Size(344, 154);
+            this.tabAction.TabIndex = 22;
             // 
             // tabPage1
             // 
@@ -274,27 +285,34 @@ namespace JTTT_1._0
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(336, 128);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "ObrazekNaStronie";
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage2.Controls.Add(this.city);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.tempTrigger);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(336, 156);
+            this.tabPage2.Size = new System.Drawing.Size(336, 128);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "TempWyzszaOd";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // tabControl2
+            // tabReaction
             // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(-1, 158);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(344, 132);
-            this.tabControl2.TabIndex = 23;
+            this.tabReaction.Controls.Add(this.tabPage3);
+            this.tabReaction.Controls.Add(this.tabPage4);
+            this.tabReaction.Location = new System.Drawing.Point(-1, 158);
+            this.tabReaction.Name = "tabReaction";
+            this.tabReaction.SelectedIndex = 0;
+            this.tabReaction.Size = new System.Drawing.Size(344, 132);
+            this.tabReaction.TabIndex = 23;
             // 
             // tabPage3
             // 
@@ -309,26 +327,98 @@ namespace JTTT_1._0
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(336, 106);
             this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "WyslijEmail";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(192, 74);
+            this.tabPage4.Size = new System.Drawing.Size(336, 106);
             this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Wyswietl";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(22, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(295, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Wyświetl komunikat na ekranie";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(9, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(249, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Jeżeli Temperatura w podanym mieście ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(9, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "jest wyższa od:";
+            // 
+            // tempTrigger
+            // 
+            this.tempTrigger.Location = new System.Drawing.Point(113, 43);
+            this.tempTrigger.Name = "tempTrigger";
+            this.tempTrigger.Size = new System.Drawing.Size(77, 20);
+            this.tempTrigger.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(196, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(112, 16);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "stopni Celcjuszka";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(9, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 16);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Miasto:";
+            // 
+            // city
+            // 
+            this.city.Location = new System.Drawing.Point(75, 80);
+            this.city.Name = "city";
+            this.city.Size = new System.Drawing.Size(118, 20);
+            this.city.TabIndex = 5;
             // 
             // JTTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 371);
-            this.Controls.Add(this.tabControl2);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabReaction);
+            this.Controls.Add(this.tabAction);
             this.Controls.Add(this.CheckWeatherButton);
             this.Controls.Add(this.DeSerialize);
             this.Controls.Add(this.Serialize);
@@ -340,12 +430,16 @@ namespace JTTT_1._0
             this.Controls.Add(this.AddToList);
             this.Name = "JTTT";
             this.Text = "JTTT";
-            this.tabControl1.ResumeLayout(false);
+            this.tabAction.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabReaction.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,11 +468,19 @@ namespace JTTT_1._0
         private System.Windows.Forms.Button Serialize;
         private System.Windows.Forms.Button DeSerialize;
         private System.Windows.Forms.Button CheckWeatherButton;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabAction;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl tabReaction;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tempTrigger;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox city;
+        private System.Windows.Forms.Label label11;
     }
 }

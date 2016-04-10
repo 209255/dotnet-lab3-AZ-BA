@@ -91,9 +91,15 @@
     <Compile Include="Migrations\201604070935481_mig1.Designer.cs">
       <DependentUpon>201604070935481_mig1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604100924427_mig2.cs" />
+    <Compile Include="Migrations\201604100924427_mig2.Designer.cs">
+      <DependentUpon>201604100924427_mig2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ReactionService\DownloadAndDisplay.cs" />
     <Compile Include="ReactionService\MDowdnloadImgSendEmai.cs" />
     <Compile Include="Database1\TaskServiceDbContext.cs" />
+    <Compile Include="ReactionService\MDownloadAndDisplay.cs" />
     <Compile Include="Tools\FileDownloader.cs" />
     <Compile Include="Tools\FileWritter.cs" />
     <Compile Include="HtmlService\HtmlService.cs" />
@@ -136,6 +142,9 @@
     <EmbeddedResource Include="Migrations\201604070935481_mig1.resx">
       <DependentUpon>201604070935481_mig1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604100924427_mig2.resx">
+      <DependentUpon>201604100924427_mig2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -145,8 +154,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

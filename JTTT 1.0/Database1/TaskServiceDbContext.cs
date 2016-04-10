@@ -5,7 +5,7 @@ namespace JTTT_1._0.Database
 {
     public class TaskServiceDbContext:DbContext
     {
-        public TaskServiceDbContext() : base("Tasks")
+        public TaskServiceDbContext() : base("Tasks2")
         {
         
         }

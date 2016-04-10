@@ -7,8 +7,17 @@ namespace JTTT_1._0
     {
         
         public virtual IAction Action { get; set; }
-        public string URL { get; set; }
         public string KeyWord { get; set; }
 
+        public override void FillModel(string[] args)
+        {
+            URL = args[0];
+            KeyWord = args[1];
+        }
+
+        public override void Complemet(string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

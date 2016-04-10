@@ -16,6 +16,7 @@ namespace JTTT_1._0
         {
             Tasks = new BindingList<Task>();
             _serialize = "serialize.txt";
+            //ClearAllTaskFromDb();
         }
 
         public BindingList<Task> Tasks { get; }
@@ -74,7 +75,6 @@ namespace JTTT_1._0
             {
                 t.Execute();
             }
-            ClearAllTaskFromDb();
         }
 
         private void ClearAll()

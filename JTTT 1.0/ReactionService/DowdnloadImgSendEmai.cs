@@ -21,7 +21,7 @@ namespace JTTT_1._0
 
             string imgPath = FileDownloader.DownloadImg(myModel.ImgURL);
 
-            string emailBody = "Masz mości Panie swój obrazek";
+            string emailBody = myModel.Description;
             string subject = "Very important message";
             IEmailService emailService = new SMTPService(gmailConfig.server, gmailConfig.port, myEmailAddres, myPassword);
             SingleMsgWithAttachment msgA = new SingleMsgWithAttachment(myEmailAddres, myModel.EmailReceiverAddress, imgPath, subject, emailBody);
