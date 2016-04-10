@@ -51,11 +51,21 @@ namespace JTTT_1._0
             this.Serialize = new System.Windows.Forms.Button();
             this.DeSerialize = new System.Windows.Forms.Button();
             this.CheckWeatherButton = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // URL
             // 
-            this.URL.Location = new System.Drawing.Point(78, 88);
+            this.URL.Location = new System.Drawing.Point(67, 62);
             this.URL.Name = "URL";
             this.URL.Size = new System.Drawing.Size(147, 20);
             this.URL.TabIndex = 0;
@@ -63,7 +73,7 @@ namespace JTTT_1._0
             // actionsLabel
             // 
             this.actionsLabel.AutoSize = true;
-            this.actionsLabel.Location = new System.Drawing.Point(4, 12);
+            this.actionsLabel.Location = new System.Drawing.Point(19, 17);
             this.actionsLabel.Name = "actionsLabel";
             this.actionsLabel.Size = new System.Drawing.Size(33, 13);
             this.actionsLabel.TabIndex = 1;
@@ -72,7 +82,7 @@ namespace JTTT_1._0
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 61);
+            this.label3.Location = new System.Drawing.Point(3, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(324, 13);
             this.label3.TabIndex = 3;
@@ -81,7 +91,7 @@ namespace JTTT_1._0
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 91);
+            this.label4.Location = new System.Drawing.Point(19, 69);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 4;
@@ -90,7 +100,7 @@ namespace JTTT_1._0
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 140);
+            this.label5.Location = new System.Drawing.Point(19, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 5;
@@ -98,7 +108,7 @@ namespace JTTT_1._0
             // 
             // KeyWord
             // 
-            this.KeyWord.Location = new System.Drawing.Point(78, 137);
+            this.KeyWord.Location = new System.Drawing.Point(67, 93);
             this.KeyWord.Name = "KeyWord";
             this.KeyWord.Size = new System.Drawing.Size(147, 20);
             this.KeyWord.TabIndex = 6;
@@ -106,7 +116,7 @@ namespace JTTT_1._0
             // reactionsLabel
             // 
             this.reactionsLabel.AutoSize = true;
-            this.reactionsLabel.Location = new System.Drawing.Point(3, 187);
+            this.reactionsLabel.Location = new System.Drawing.Point(6, 20);
             this.reactionsLabel.Name = "reactionsLabel";
             this.reactionsLabel.Size = new System.Drawing.Size(73, 13);
             this.reactionsLabel.TabIndex = 7;
@@ -115,7 +125,7 @@ namespace JTTT_1._0
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 224);
+            this.label7.Location = new System.Drawing.Point(6, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(295, 13);
             this.label7.TabIndex = 8;
@@ -124,7 +134,7 @@ namespace JTTT_1._0
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 268);
+            this.label8.Location = new System.Drawing.Point(6, 79);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 9;
@@ -132,7 +142,7 @@ namespace JTTT_1._0
             // 
             // EmailAdress
             // 
-            this.EmailAdress.Location = new System.Drawing.Point(78, 265);
+            this.EmailAdress.Location = new System.Drawing.Point(85, 72);
             this.EmailAdress.Name = "EmailAdress";
             this.EmailAdress.Size = new System.Drawing.Size(147, 20);
             this.EmailAdress.TabIndex = 10;
@@ -150,7 +160,7 @@ namespace JTTT_1._0
             // actionsBox
             // 
             this.actionsBox.FormattingEnabled = true;
-            this.actionsBox.Location = new System.Drawing.Point(78, 9);
+            this.actionsBox.Location = new System.Drawing.Point(67, 14);
             this.actionsBox.Name = "actionsBox";
             this.actionsBox.Size = new System.Drawing.Size(209, 21);
             this.actionsBox.TabIndex = 12;
@@ -159,7 +169,7 @@ namespace JTTT_1._0
             // reactionsBox
             // 
             this.reactionsBox.FormattingEnabled = true;
-            this.reactionsBox.Location = new System.Drawing.Point(78, 184);
+            this.reactionsBox.Location = new System.Drawing.Point(85, 17);
             this.reactionsBox.Name = "reactionsBox";
             this.reactionsBox.Size = new System.Drawing.Size(209, 21);
             this.reactionsBox.TabIndex = 13;
@@ -239,11 +249,86 @@ namespace JTTT_1._0
             this.CheckWeatherButton.UseVisualStyleBackColor = true;
             this.CheckWeatherButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(-1, 2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(344, 154);
+            this.tabControl1.TabIndex = 22;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage1.Controls.Add(this.actionsBox);
+            this.tabPage1.Controls.Add(this.actionsLabel);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.URL);
+            this.tabPage1.Controls.Add(this.KeyWord);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(336, 128);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(336, 156);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Location = new System.Drawing.Point(-1, 158);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(344, 132);
+            this.tabControl2.TabIndex = 23;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage3.Controls.Add(this.reactionsLabel);
+            this.tabPage3.Controls.Add(this.reactionsBox);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.EmailAdress);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(336, 106);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(192, 74);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // JTTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 371);
+            this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.CheckWeatherButton);
             this.Controls.Add(this.DeSerialize);
             this.Controls.Add(this.Serialize);
@@ -252,21 +337,15 @@ namespace JTTT_1._0
             this.Controls.Add(this.TaskList);
             this.Controls.Add(this.TaskName);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.reactionsBox);
-            this.Controls.Add(this.actionsBox);
             this.Controls.Add(this.AddToList);
-            this.Controls.Add(this.URL);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.reactionsLabel);
-            this.Controls.Add(this.KeyWord);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.actionsLabel);
-            this.Controls.Add(this.EmailAdress);
             this.Name = "JTTT";
             this.Text = "JTTT";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +374,11 @@ namespace JTTT_1._0
         private System.Windows.Forms.Button Serialize;
         private System.Windows.Forms.Button DeSerialize;
         private System.Windows.Forms.Button CheckWeatherButton;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }

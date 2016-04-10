@@ -87,6 +87,7 @@ namespace JTTT_1._0
         public void ClearAll()
         {
             Tasks.Clear();
+            ClearAllTaskFromDb();
         }
 
         public void Serialize()
