@@ -9,7 +9,7 @@ namespace JTTT_1._0
     {
         private static string GetPageHtml(string url)
         {
-            
+            if (url == null) return null;
             using (var wc = new WebClient())
             {
                 wc.Encoding = Encoding.UTF8;
@@ -23,6 +23,7 @@ namespace JTTT_1._0
         {
             var doc = new HtmlDocument();
             var pageHtml = GetPageHtml(url);
+            if (pageHtml == null) return null;
             doc.LoadHtml(pageHtml);
             var nodes = doc.DocumentNode.Descendants("img");
             return (from node in nodes 

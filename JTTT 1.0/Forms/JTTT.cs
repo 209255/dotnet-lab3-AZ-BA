@@ -33,14 +33,12 @@ namespace JTTT_1._0
             if (reactionModel == null) return;
             reactionModel.EmailReceiverAddress = EmailAdress.Text;
             reactionModel.URL = URL.Text;
-            Task task = new Task(action, reaction, actionModel, reactionModel,TaskName.Text);
-            Services.Instance.Tasks.AddTask(task);
-            Services.Instance.Tasks.AddTaskToDb(task);
+            Services.Instance.Tasks.AddTaskToDb(new Task(action, reaction, actionModel, reactionModel, TaskName.Text));
        }
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            Services.Instance.Tasks.ClearAll();
+            Services.Instance.Tasks.ClearAllTaskFromDb();
         }
 
         private void Serialize_Click(object sender, EventArgs e)
